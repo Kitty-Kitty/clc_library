@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <!--其他配置文件-->
+  <config_files>
+    <config_file path="configs\cp_css_encrypt.xml" type="xml"/>
+    <config_file path="configs\cp_system.xml" type="xml"/>
+  </config_files>
+</configs>

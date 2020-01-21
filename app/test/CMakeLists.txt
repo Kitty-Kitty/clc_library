@@ -1,0 +1,87 @@
+
+
+#set css_ipc executable name
+SET(CP_TEST_EXECUTABLE_NAME cp_test)
+
+#set css_ipc root directory
+SET(CP_TEST_PROJECT_SOURCE_DIR ${CP_APP_TEST_DIR})
+
+
+IF(PLATEFORM_HISIV500)        										#cmake -D PLATEFORM_HISIV500=ON ../
+	    #set hi3519 mode
+	    ADD_DEFINITIONS(-DCP_HI3519_MODE=1)
+	    ADD_DEFINITIONS(-DSENSOR_TYPE=OMNIVISION_OV4689_MIPI_1080P_30FPS)
+	    ADD_DEFINITIONS(-DSNS_OV4689_1080P_DOUBLE)
+	    ADD_DEFINITIONS(-DHI_MIPI_ENABLE)
+	    #SENSOR_TYPE = OMNIVISION_OV4689_MIPI_1080P_30FPS
+      #CFLAGS += -DSNS_OV4689_1080P_DOUBLE
+      #CFLAGS += -DHI_MIPI_ENABLE
+ENDIF()
+
+#set src directory
+SET(CP_TEST_SRC_DIR ${CP_TEST_PROJECT_SOURCE_DIR}/src)
+#set include directory
+SET(CP_TEST_INCLUDE_DIR ${CP_TEST_PROJECT_SOURCE_DIR}/include)
+#set lib directory
+SET(CP_TEST_LIBRARY_DIR ${CP_TEST_PROJECT_SOURCE_DIR}/lib)
+
+
+#get file list
+AUX_SOURCE_DIRECTORY(${CP_TEST_SRC_DIR} CP_TEST_EXECUTABLE_FILES_LIST)
+
+#add all subdirectory
+ADD_SUBDIRECTORY(${CP_TEST_SRC_DIR})
+
+#MESSAGE(STATUS "CP_TEST_EXECUTABLE_FILES_LIST : "${CP_TEST_EXECUTABLE_FILES_LIST})
+
+#add ipc include direntories
+INCLUDE_DIRECTORIES(
+    ${CP_TEST_INCLUDE_DIR}
+    )
+
+
+#add ipc library directories 
+LINK_DIRECTORIES(
+    ${CP_TEST_LIBRARY_DIR}
+    )
+    
+    
+#MESSAGE(STATUS "CP_TEST_LIBRARY_DIR : "${CP_TEST_LIBRARY_DIR})
+
+
+#add targe
+SET(EXECUTABLE_OUTPUT_PATH ${CP_PROJECT_OUTPUT_TOP_DIR}/${CP_TEST_EXECUTABLE_NAME})
+
+MESSAGE(STATUS " ")
+MESSAGE(STATUS "-----------------build project:[ ${CP_TEST_EXECUTABLE_NAME} ]-----------------")
+MESSAGE(STATUS "c compiler:[ ${CMAKE_C_COMPILER} ] cxx compiler:[ ${CMAKE_CXX_COMPILER} ]")
+MESSAGE(STATUS "project:[ ${CP_TEST_EXECUTABLE_NAME} ] path  : [ ${CP_TEST_PROJECT_SOURCE_DIR} ]")
+MESSAGE(STATUS "project:[ ${CP_TEST_EXECUTABLE_NAME} ] output: [ ${EXECUTABLE_OUTPUT_PATH} ]")
+
+
+ADD_EXECUTABLE(${CP_TEST_EXECUTABLE_NAME} ${CP_TEST_EXECUTABLE_FILES_LIST})
+TARGET_LINK_LIBRARIES(${CP_TEST_EXECUTABLE_NAME}
+    ${CP_PROJECT_LIBRARY_STATIC_NAME} 
+		libxml2.a
+		libuv.a
+		libzlog.a
+		libortp.a
+		
+		libgmf_parser.a
+		libuuid.a
+		libpthread.a
+		libc.a
+		libz.a
+		liblzma.a
+		libcharset.a
+		libiconv.a
+		liblfds710.a
+		libdl.a
+		librt.a
+		)
+		
+		
+MESSAGE(STATUS "executable:[${CP_TEST_EXECUTABLE_NAME}]")
+
+
+

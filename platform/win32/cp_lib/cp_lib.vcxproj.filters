@@ -1,0 +1,1153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{3fbc3e44-6b49-4a57-9c66-6afd94156250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{2e163e17-905d-4129-b866-f360d4665eca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{d6c322c5-2885-4913-9b3c-3fd7245b3ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\images">
+      <UniqueIdentifier>{34c78f4e-257b-4481-843e-f07868b8d90b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\sounds">
+      <UniqueIdentifier>{c893a823-492c-4d06-9c2a-42c171b2aa32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e246c498-abbb-4ba5-8e19-4b78e369c359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\socket">
+      <UniqueIdentifier>{c21f1a3d-34a0-4842-9370-0cf90ece5339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\socket\libuv_socket">
+      <UniqueIdentifier>{af8ab77b-53d2-4065-b2a8-b252662b7d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\log">
+      <UniqueIdentifier>{3bbe1717-d16f-4a46-94eb-97894cbdebda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\log\zlog">
+      <UniqueIdentifier>{61f09bed-c0e9-4d43-af24-71b0fae421f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{53f96723-d2aa-43f2-8056-5f24c7d4328f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\conf">
+      <UniqueIdentifier>{3f7af48e-9e60-40fa-920c-13d49330b2c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\os">
+      <UniqueIdentifier>{f795a323-8a4a-467e-b3b6-7b709fa1b602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\thread">
+      <UniqueIdentifier>{9ce2e2e9-0a0a-4692-b010-1e41ba90b98a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\thread\libuv_thread">
+      <UniqueIdentifier>{1122278d-94f5-4bf6-ae46-0660223868a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\timer">
+      <UniqueIdentifier>{c19ee139-a102-420f-901d-73812a0a3b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\timer\libuv_timer">
+      <UniqueIdentifier>{b87b326a-2ba1-4b7e-a8ef-7e9d28d5b509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\protocol">
+      <UniqueIdentifier>{c67ea29f-b977-4300-86f1-ec555933da69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\protocol\prot_css">
+      <UniqueIdentifier>{04d75434-c00e-4005-8f59-42685ce1cd0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\module">
+      <UniqueIdentifier>{556841d1-e492-4a33-b633-5f97faff77cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pool">
+      <UniqueIdentifier>{c3bf12cc-8468-42ca-a20f-dc92a2906d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pool\memory">
+      <UniqueIdentifier>{b67618ec-9bd4-4eab-84cc-3a558c1e3e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{5b6b6c36-78f1-4870-813b-3442998a3d3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\func">
+      <UniqueIdentifier>{8b603289-056a-4211-a110-8833407b0c09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\process">
+      <UniqueIdentifier>{8626ec53-cae1-4b62-88ff-0ae9321e4167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filter">
+      <UniqueIdentifier>{2bb04292-a193-4d6f-8214-21db6f469b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec">
+      <UniqueIdentifier>{dc71fefd-8093-4e38-a7bf-2796bb0766c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\session">
+      <UniqueIdentifier>{e819c631-1578-41c5-bed6-3d60ba82fdd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hook">
+      <UniqueIdentifier>{83ddeb35-9b7a-4c90-9ec4-f381fdf76d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{e3150a83-7d40-4ffd-ba92-cac7f29dfb4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extend">
+      <UniqueIdentifier>{5671da5c-5532-44bc-a68e-fb05258af498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev">
+      <UniqueIdentifier>{2928c21a-9ee6-455c-9b4b-ec147756d854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media">
+      <UniqueIdentifier>{a290c300-4f46-4e6d-ba0b-f4e25e3b00b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\description">
+      <UniqueIdentifier>{ce5d6541-4caf-4357-b06b-d2f50cfec45b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\packet">
+      <UniqueIdentifier>{86726bdd-7a2c-4628-80d9-8dcc14ee568f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\surface">
+      <UniqueIdentifier>{e7b983aa-25b8-4943-852c-346c9f95690c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\process">
+      <UniqueIdentifier>{1c4de8d8-da91-4d42-a6cb-9dbd10d413d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\core">
+      <UniqueIdentifier>{36562317-61f7-4608-8ea7-429efbb4e487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\media\canvas">
+      <UniqueIdentifier>{e1224321-1a0e-47eb-a185-ba7002d33868}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\cp_core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_default.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_define_func.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_define_str.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_typedef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_inet.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\log\cp_log.h">
+      <Filter>src\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\log\zlog\cp_zlog.h">
+      <Filter>src\log\zlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_buf.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_list.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_utils.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_uuid.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\conf\cp_conf.h">
+      <Filter>src\conf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\conf\cp_conf_string.h">
+      <Filter>src\conf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\os\cp_env.h">
+      <Filter>src\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread.h">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\cp_timer.h">
+      <Filter>src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer.h">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_queue.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_manager.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_info.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_info.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_array.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_chain.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_alloc.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_define.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_core.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_atomic.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_manager.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_core.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_rbtree.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_info.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\cp_timer_manager.h">
+      <Filter>src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\cp_timer_manager_info.h">
+      <Filter>src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\cp_timer_core.h">
+      <Filter>src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_register.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_register.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\cp_timer_module_list.h">
+      <Filter>src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_info.h">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_manager_info.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_module_list.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_core.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_info.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_manager.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_manager_info.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_module_list.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\memory\cp_mem_pool.h">
+      <Filter>src\pool\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\memory\cp_mem_pool_info.h">
+      <Filter>src\pool\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app_entry.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app_info.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app_function.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_string.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_math.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_function.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app_core.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_core.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_info.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_manager.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_manager_info.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_module_list.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_function.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager.h">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_info.h">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager_info.h">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_core.h">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_type.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_type.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_mpalloc.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\cp_pool_option.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_thread_option.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_core.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_info.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager_info.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_option.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_type.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_core.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_info.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_manager.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_manager_info.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_module_list.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process_core.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process_info.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process_manager.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process_manager_info.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\process\cp_process_module_list.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_core.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_info.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_manager.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_manager_info.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_module_list.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_core.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_manager.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_manager_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_module_list.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\codec\cp_codec_option.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_core.h">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager.h">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager_info.h">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_core.h">
+      <Filter>src\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_device_info.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_device_type.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_log_info.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_info.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_semh_command.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_status.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_update_info.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_core.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_core.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_info.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_manager.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_manager_info.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_core.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_info.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager_info.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_handle.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_tree_ex.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_third_party.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_status.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\filter\cp_filter_status.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_bit.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\func\cp_func_status.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_option.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager_option.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_mutex.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_sem.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_rwlock.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_barrier.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\cp_mutex_core.h">
+      <Filter>src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_kfifo.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_module_list.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_register_function.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_dependent.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_array_pool.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_status.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\session\cp_session_typedef.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\hook\cp_hook_typedef.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\extend\cp_extend.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\extend\cp_extend_core.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\extend\cp_extend_info.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\extend\cp_extend_manager.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\extend\cp_extend_manager_info.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_lockfree_queue.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_option.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_app_printf.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\cp_socket_flag.h">
+      <Filter>src\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\conf\cp_conf_xml.h">
+      <Filter>src\conf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\conf\cp_conf_xml_string.h">
+      <Filter>src\conf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_core.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_manager.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_manager_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_module_list.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_status.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_printf.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_gettimeofday.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_type.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_network.h">
+      <Filter>src\protocol\prot_css</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_time.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dev\cp_dev_description.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_safe_queue.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\app\cp_daemon.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_printf.h">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_function.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_message.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_file_system.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_audio_description.h">
+      <Filter>src\media\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\description\cp_codec_pixel_format.h">
+      <Filter>src\media\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\description\cp_media_description.h">
+      <Filter>src\media\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\description\cp_media_type.h">
+      <Filter>src\media\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\description\cp_video_description.h">
+      <Filter>src\media\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\core\cp_frame_rect.h">
+      <Filter>src\media\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\core\cp_media_core.h">
+      <Filter>src\media\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\packet\cp_media_packet.h">
+      <Filter>src\media\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\packet\cp_video_frame_packet.h">
+      <Filter>src\media\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\process\cp_media_process.h">
+      <Filter>src\media\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\process\cp_video_frame_process.h">
+      <Filter>src\media\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\surface\cp_media_surface.h">
+      <Filter>src\media\surface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\surface\cp_video_surface.h">
+      <Filter>src\media\surface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\media\canvas\cp_media_canvas.h">
+      <Filter>src\media\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\media\canvas\cp_video_canvas.h">
+      <Filter>src\media\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\module\cp_module_option_function.h">
+      <Filter>src\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\include\cp_status.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\cp_std.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\socket\cp_inet.c">
+      <Filter>src\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\socket\cp_socket.c">
+      <Filter>src\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\socket\libuv_socket\cp_uv_socket.c">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\log\cp_log.c">
+      <Filter>src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\log\zlog\cp_zlog.c">
+      <Filter>src\log\zlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_buf.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_utils.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_uuid.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\conf\cp_conf.c">
+      <Filter>src\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\os\cp_env.c">
+      <Filter>src\os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_thread.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\libuv_thread\cp_uv_thread.c">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\cp_timer.c">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\libuv_timer\cp_uv_timer.c">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_queue.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_manager.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_array.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_chain.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_alloc.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_atomic.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\socket\cp_socket_manager.c">
+      <Filter>src\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_rbtree.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\cp_timer_manager.c">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\cp_timer_info.h">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\cp_timer_module_list.c">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\socket\cp_socket_module_list.c">
+      <Filter>src\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pool\cp_pool.c">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pool\cp_pool_manager.c">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pool\cp_pool_module_list.c">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pool\memory\cp_mem_pool.c">
+      <Filter>src\pool\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\app\cp_app.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_string.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_math.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_function.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_thread_manager.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_thread_module_list.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_manager_function.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager.c">
+      <Filter>src\thread\libuv_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_mpalloc.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager.c">
+      <Filter>src\socket\libuv_socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\func\cp_func.c">
+      <Filter>src\func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\func\cp_func_manager.c">
+      <Filter>src\func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\func\cp_func_module_list.c">
+      <Filter>src\func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\process\cp_process.c">
+      <Filter>src\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\process\cp_process_manager.c">
+      <Filter>src\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\process\cp_process_module_list.c">
+      <Filter>src\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\filter\cp_filter.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\filter\cp_filter_manager.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\filter\cp_filter_module_list.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\codec\cp_codec.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\codec\cp_codec_manager.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\codec\cp_codec_module_list.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager.c">
+      <Filter>src\timer\libuv_timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\session\cp_session.c">
+      <Filter>src\session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\session\cp_session_manager.c">
+      <Filter>src\session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\hook\cp_hook.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\hook\cp_hook_manager.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_mutex.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_sem.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_rwlock.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\cp_barrier.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\hook\cp_hook_module_list.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_list.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\app\cp_app_function.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_register_function.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_dependent.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_array_pool.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\cp_version.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\extend\cp_extend.c">
+      <Filter>src\extend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\extend\cp_extend_manager.c">
+      <Filter>src\extend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_lockfree_queue.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\conf\cp_conf_xml.c">
+      <Filter>src\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dev\cp_dev.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dev\cp_dev_manager.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dev\cp_dev_module_list.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_gettimeofday.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_time.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dev\cp_dev_description.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_safe_queue.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\app\cp_daemon.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pool\cp_pool_function.c">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_message.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cp_file_system.c">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\description\cp_audio_description.c">
+      <Filter>src\media\description</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\description\cp_media_description.c">
+      <Filter>src\media\description</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\description\cp_video_description.c">
+      <Filter>src\media\description</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\core\cp_frame_rect.c">
+      <Filter>src\media\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\packet\cp_media_packet.c">
+      <Filter>src\media\packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\packet\cp_video_frame_packet.c">
+      <Filter>src\media\packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\process\cp_media_process.c">
+      <Filter>src\media\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\process\cp_video_frame_process.c">
+      <Filter>src\media\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\surface\cp_media_surface.c">
+      <Filter>src\media\surface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\surface\cp_video_surface.c">
+      <Filter>src\media\surface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\canvas\cp_media_canvas.c">
+      <Filter>src\media\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\media\canvas\cp_video_canvas.c">
+      <Filter>src\media\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\module\cp_module_option_function.c">
+      <Filter>src\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\cp_status.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\src\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="..\..\..\src\app\CMakeLists.txt">
+      <Filter>src\app</Filter>
+    </Text>
+    <Text Include="..\..\..\src\codec\CMakeLists.txt">
+      <Filter>src\codec</Filter>
+    </Text>
+    <Text Include="..\..\..\src\conf\CMakeLists.txt">
+      <Filter>src\conf</Filter>
+    </Text>
+    <Text Include="..\..\..\src\filter\CMakeLists.txt">
+      <Filter>src\filter</Filter>
+    </Text>
+    <Text Include="..\..\..\src\func\CMakeLists.txt">
+      <Filter>src\func</Filter>
+    </Text>
+    <Text Include="..\..\..\src\hook\CMakeLists.txt">
+      <Filter>src\hook</Filter>
+    </Text>
+    <Text Include="..\..\..\src\log\CMakeLists.txt">
+      <Filter>src\log</Filter>
+    </Text>
+    <Text Include="..\..\..\src\log\zlog\CMakeLists.txt">
+      <Filter>src\log\zlog</Filter>
+    </Text>
+    <Text Include="..\..\..\src\module\CMakeLists.txt">
+      <Filter>src\module</Filter>
+    </Text>
+    <Text Include="..\..\..\src\os\CMakeLists.txt">
+      <Filter>src\os</Filter>
+    </Text>
+    <Text Include="..\..\..\src\pool\CMakeLists.txt">
+      <Filter>src\pool</Filter>
+    </Text>
+    <Text Include="..\..\..\src\pool\memory\CMakeLists.txt">
+      <Filter>src\pool\memory</Filter>
+    </Text>
+    <Text Include="..\..\..\src\process\CMakeLists.txt">
+      <Filter>src\process</Filter>
+    </Text>
+    <Text Include="..\..\..\src\protocol\CMakeLists.txt">
+      <Filter>src\protocol</Filter>
+    </Text>
+    <Text Include="..\..\..\src\protocol\prot_css\CMakeLists.txt">
+      <Filter>src\protocol\prot_css</Filter>
+    </Text>
+    <Text Include="..\..\..\src\session\CMakeLists.txt">
+      <Filter>src\session</Filter>
+    </Text>
+    <Text Include="..\..\..\src\socket\CMakeLists.txt">
+      <Filter>src\socket</Filter>
+    </Text>
+    <Text Include="..\..\..\src\socket\libuv_socket\CMakeLists.txt">
+      <Filter>src\socket\libuv_socket</Filter>
+    </Text>
+    <Text Include="..\..\..\src\thread\CMakeLists.txt">
+      <Filter>src\thread</Filter>
+    </Text>
+    <Text Include="..\..\..\src\thread\libuv_thread\CMakeLists.txt">
+      <Filter>src\thread\libuv_thread</Filter>
+    </Text>
+    <Text Include="..\..\..\src\timer\CMakeLists.txt">
+      <Filter>src\timer</Filter>
+    </Text>
+    <Text Include="..\..\..\src\timer\libuv_timer\CMakeLists.txt">
+      <Filter>src\timer\libuv_timer</Filter>
+    </Text>
+    <Text Include="..\..\..\src\utils\CMakeLists.txt">
+      <Filter>src\utils</Filter>
+    </Text>
+    <Text Include="..\..\..\src\extend\CMakeLists.txt">
+      <Filter>src\extend</Filter>
+    </Text>
+    <Text Include="..\..\..\src\core\CMakeLists.txt">
+      <Filter>src\core</Filter>
+    </Text>
+    <Text Include="..\..\..\src\dev\CMakeLists.txt">
+      <Filter>src\dev</Filter>
+    </Text>
+    <Text Include="..\..\..\Changes.txt" />
+    <Text Include="..\..\..\src\media\CMakeLists.txt">
+      <Filter>src\media</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

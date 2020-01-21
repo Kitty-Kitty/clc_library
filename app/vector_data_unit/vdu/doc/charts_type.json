@@ -1,0 +1,141 @@
+{
+  "xAxis": [
+    {
+      "type": "category",
+      "categories": [
+        "一月",
+        "二月",
+        "三月",
+        "四月",
+        "五月",
+        "六月",
+        "七月",
+        "八月",
+        "九月",
+        "十月",
+        "十一月",
+        "十二月"
+      ],
+      "index": 0,
+      "isX": true
+    }
+  ],
+  "series": [
+    {
+      "name": "东京",
+      "data": [
+        7,
+        6.9,
+        9.5,
+        18,
+        18.4,
+        21.5,
+        25.2,
+        26.5,
+        23.3,
+        18.3,
+        13.9,
+        9.6
+      ],
+      "animation": true,
+      "connectEnds": true,
+      "enableMouseTracking": false,
+      "_colorIndex": 0
+    },
+    {
+      "name": "伦敦",
+      "data": [
+        3.9,
+        4.2,
+        5.7,
+        8,
+        11.9,
+        15.2,
+        17,
+        16.6,
+        14.2,
+        10.3,
+        6.6,
+        4.8
+      ],
+      "enableMouseTracking": false,
+      "_colorIndex": 1
+    }
+  ],
+  "yAxis": [
+    {
+      "title": {
+        "text": "气温（℃）"
+      },
+      "index": 0
+    }
+  ],
+  "chart": {
+    "style": {
+      "fontFamily": "\"微软雅黑\", Arial, Helvetica, sans-serif",
+      "color": "#ffe57f",
+      "fontSize": "12px",
+      "fontWeight": "normal",
+      "fontStyle": "normal"
+    },
+    "width": 531,
+    "height": 477,
+    "borderWidth": 0,
+    "borderRadius": 13,
+    "plotBackgroundColor": "#0288d1",
+    "plotBorderWidth": 0,
+    "type": "column"
+  },
+  "title": {
+    "text": "月平均气温",
+    "style": {
+      "fontFamily": "\"微软雅黑\", Arial, Helvetica, sans-serif",
+      "color": "#7e57c2",
+      "fontSize": "18px",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "fill": "#333333",
+      "width": "874px"
+    }
+  },
+  "subtitle": {
+    "text": "数据来源: WorldClimate.com",
+    "style": {
+      "fontFamily": "\"微软雅黑\", Arial, Helvetica, sans-serif",
+      "color": "#84ffff",
+      "fontSize": "12px",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "fill": "#666666",
+      "width": "874px"
+    }
+  },
+  "plotOptions": {
+    "line": {
+      "animation": false,
+      "allowPointSelect": false
+    },
+    "series": {
+      "dataLabels": {
+        "enabled": true
+      },
+      "animation": false
+    }
+  },
+  "zAxis": {
+    "alternateGridColor": "#43a047",
+    "ceiling": 0
+  },
+  "colors": [
+    "#ff3d00",
+    "#c0ca33",
+    "#90ed7d",
+    "#f7a35c",
+    "#8085e9",
+    "#f15c80",
+    "#e4d354",
+    "#2b908f",
+    "#f45b5b",
+    "#91e8e1"
+  ]
+}

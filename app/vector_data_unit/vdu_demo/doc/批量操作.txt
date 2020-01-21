@@ -1,0 +1,37 @@
+#! /bin/sh
+
+
+function print_uasg()
+{
+	echo "usage: cp_change $1 $2 $3";
+	echo "example: cp_change /home/project vdu_demo css_encrypt"
+}
+
+if [[ -z $1 ||  -z $2 ||  -z $3 ]]; then
+	print_uasg;
+	exit 1;
+fi
+
+if [ ! -d $1 ]; then
+	echo "not found project[$1]";
+	print_uasg;
+	exit 1;
+fi
+
+#批量修改文件名
+#find ./  -type f -exec rename -v 'vdu_demo' 'css_encrypt' {} \;
+find $1  -type f -exec rename -v "$2" "$3" {} \;
+
+#批量修改文件内容
+#find ./  -type f -exec sed -i "s/vdu_demo/css_encrypt/g" {} \;
+find $1  -type f -exec sed -i "s/$2/$3/g" {} \;
+
+#批量修改文件内容
+#find ./  -type f -exec sed -i "s/VDU_DEMO/CSS_ENCRYPT/g" {} \;
+
+#小写转大写
+typeset -u tmp_src_string=$2;
+typeset -u tmp_dest_string=$3;
+find  $1  -type f -exec sed -i "s/${tmp_src_string}/${tmp_dest_string}/g" {} \;
+
+echo "change project[$1] from[$2] to [$3] successed!"

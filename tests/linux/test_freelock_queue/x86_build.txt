@@ -1,0 +1,1 @@
+gcc /home/f/Project/cp_app/tests/win32/test_freelock_queue/test_freelock_queue.c  /home/f/Project/cp_app/src/utils/cp_lockfree_queue.c  -I /home/f/Project/cp_app/src/utils -I /home/f/Project/liblfds_x86/liblfds7.1.0/liblfds710/inc -L /home/f/Project/liblfds_x86/liblfds7.1.0/liblfds710/bin -llfds710 -lpthread -o  test_freelock_queue

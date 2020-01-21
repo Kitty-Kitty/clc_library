@@ -1,0 +1,43 @@
+
+
+
+#set src files list
+#set session directory
+SET(CP_SRC_SESSION_CSS_DIR ${CP_SRC_SESSION_DIR}/css)
+
+
+
+
+
+#add session source directory
+AUX_SOURCE_DIRECTORY(${CP_SRC_SESSION_CSS_DIR} CP_SRC_SESSION_CSS_FILES_LIST)
+
+
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_SRC_SESSION_CSS_DIR}/semh)
+
+
+
+
+#add source file list
+SET(CP_EXECUTABLE_FILES_LIST 
+	${CP_EXECUTABLE_FILES_LIST} 
+	${CP_SRC_SESSION_CSS_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_SRC_SESSION_DIR 
+	${CP_SRC_SESSION_DIR} 
+	${CP_SRC_SESSION_CSS_DIR}
+	
+	PARENT_SCOPE
+	)
+
+
+
+	
+	

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cp_system>
+  <!--系统的时间精度,支持的单位：ns(纳秒)/ms(微秒)/s（秒）/m（分）/h（小）/d（天）-->
+  <timer_resolution>500ms</timer_resolution>
+  
+  <!--服务器性能配置-->
+  <measure>
+    <!--最大使用的cpu个数-->
+    <cpu>1</cpu>
+  </measure>
+  
+  <!--网络配置-->
+  <network_configure>
+    <!--UDP数据包大小，支持单位:B\KB\MB\GB-->
+    <packet_length>1KB</packet_length>
+  </network_configure>
+</cp_system>

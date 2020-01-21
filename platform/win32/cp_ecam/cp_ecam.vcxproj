@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DF2AA291-9735-4403-8934-B35A09E68096}</ProjectGuid>
+    <RootNamespace>cp_ecam</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\enforce_camera\;$(SolutionDir)..\..\app\enforce_camera\include\;$(SolutionDir)..\..\app\enforce_camera\src\;$(SolutionDir)..\..\app\enforce_camera\src\codec;$(SolutionDir)..\..\app\enforce_camera\src\dev;$(SolutionDir)..\..\app\enforce_camera\src\core\;$(SolutionDir)..\..\app\enforce_camera\src\extend\;$(SolutionDir)..\..\app\enforce_camera\src\filter\;$(SolutionDir)..\..\app\enforce_camera\src\func\;$(SolutionDir)..\..\app\enforce_camera\src\func\ecam\;$(SolutionDir)..\..\app\enforce_camera\src\hook\;$(SolutionDir)..\..\app\enforce_camera\src\hook\semh\;$(SolutionDir)..\..\app\enforce_camera\src\process\;$(SolutionDir)..\..\app\enforce_camera\src\session\;$(SolutionDir)..\..\app\enforce_camera\src\session\rtp\;$(SolutionDir)..\..\third-party\hi\hi3516c\mpp_big-little\include;$(SolutionDir)..\..\third-party\hi\hi3516c\mpp_big-little\sample\common;$(SolutionDir)..\..\third-party\ortp-0.24.0\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cp_lib.lib;oRTP.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\oRTP\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\enforce_camera\configs\cp_codec.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\enforce_camera\configs\cp_configs.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\enforce_camera\configs\cp_ecam.xml" />
+    <Xml Include="..\..\..\app\enforce_camera\configs\cp_system.xml" />
+    <Xml Include="..\..\..\app\enforce_camera\configs\cp_video.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\enforce_camera\configs\cp_log.conf" />
+    <None Include="..\..\..\app\enforce_camera\configs\cp_player_log.conf" />
+    <None Include="..\..\..\app\enforce_camera\configs\ecam.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_channel_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_conf_string.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_default.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_h264.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_heartbeat.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_include.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_module_include.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_module_type.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_proc.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_rtp.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_socket_data.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_task.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_ecam_version.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_media_play.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\cp_media_server_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\include\css_process_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_module_option.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_conf.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_conf_string.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_opetion.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_sample.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_include.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c\cp_hi3516c_dev.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c\cp_hi3516c_dev_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c\cp_hi3516c_dev_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c\cp_hi3516c_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\cp_hi3516c_vi_dev.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\cp_hi3516c_vi_dev_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\cp_hi3516c_vi_dev_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\cp_hi3516c_vi_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_manager_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_manager_flag.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_module_option.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_conf.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_conf_string.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_pro.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_block.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_dependent.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_option.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_register.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_stack.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_type.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_handle.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_printf.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_manager.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_manager_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_module_list.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_module_type.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session_core.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session_info.h" />
+    <ClInclude Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session_printf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_channel_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_h264.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_heartbeat.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_info.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_module_list.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_proc.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_rtp.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_socket_data.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_ecam_task.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_media_codec_info.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\app\cp_media_play.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\codec\cp_ecam_codec_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_codec_conf.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\codec\hi3516c\cp_hi3516c_av_sample.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\dev\cp_ecam_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\dev\hi3516c\cp_hi3516c_dev.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\cp_hi3516c_vi_dev.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\extend\cp_ecam_extend_module_list.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\filter\cp_ecam_filter_module_list.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\filter\rtp\cp_rtp_filter.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\audio\cp_audio_func_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\cp_ecam_func_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_conf.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\ecam\cp_ecam_func_pro.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\func\video\cp_video_func_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_dependent.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\cp_ecam_hook_module_list.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_handle.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\hook\rtp\cp_rtp_hook_printf.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\main.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\process\cp_ecam_process_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_manager.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\session\cp_ecam_session_module_list.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session.c" />
+    <ClCompile Include="..\..\..\app\enforce_camera\src\session\rtp\cp_rtp_session_printf.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\enforce_camera\Changes.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\codec\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\codec\hi3516c\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\dev\hi3516c\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\dev\hi3516c_vi\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\extend\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\filter\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\filter\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\func\audio\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\func\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\func\ecam\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\func\video\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\hook\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\hook\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\process\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\session\CMakeLists.txt" />
+    <Text Include="..\..\..\app\enforce_camera\src\session\rtp\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

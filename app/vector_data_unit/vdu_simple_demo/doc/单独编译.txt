@@ -1,0 +1,52 @@
+./configure -prefix /opt/Project/qt_project/qt_5.9.1/qt-5.9.1-arm-hisiv400-linux-qtbase -confirm-license -opensource -xplatform arm-hisiv400-linux-g++ -sysroot /opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/ -pch -qt-libjpeg -qt-libpng -qt-zlib -opengl es2 -opengles3 -egl --enable-eglfs -qpa eglfs -linuxfb -nomake tests -nomake examples -skip qtserialbus -skip qtserialport -skip xmlpatterns -gui -widgets -iconv --enable-linuxfb -skip qtwayland -debug-and-release -shared -static
+
+
+
+
+
+
+
+/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/
+/opt/Project/hi3536/cp_player/build/debug/cp_lib/
+/opt/Project/hi3536/cp_player/build/debug/cp_vdu/
+
+
+
+arm-hisiv400-linux-gcc ../src/main.c -I/home/f/Project/tmp/vdu_sample_demo/include/ -L/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_vdu/ -lcp_lib -lcp_vdu  -o vdu_sample_demo
+
+
+
+arm-hisiv400-linux-gcc ../src/main.c -I/home/f/Project/tmp/vdu_sample_demo/include/ -L/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_vdu/ -lcp_lib -lcp_vdu -lQt5Charts -lQt5Svg -lQt5Widgets -lQt5Core -lQt5Gui -o vdu_sample_demo
+
+
+
+arm-hisiv400-linux-g++ ../src/main.c -I/home/f/Project/tmp/vdu_sample_demo/include/ -L/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_vdu/ -lcp_lib -lcp_vdu -lQt5Charts -lQt5Svg -lQt5Widgets -lQt5Core -lQt5Gui -o vdu_sample_demo
+
+
+
+arm-hisiv400-linux-g++ ../src/main.c -I/home/f/Project/tmp/vdu_sample_demo/include/ -L/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_vdu/ -L/opt/Project/lib/opengles/lib  -L/opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/lib -lcp_lib -lcp_vdu -lQt5Core -lQt5Gui -lQt5Svg -lQt5Widgets -lQt5Charts  -lEGL  -lGLESv1_CM -lGLESv2 -lmali -ldl  -o vdu_sample_demo
+
+
+
+
+
+export LD_LIBRARY_PATH=/mnt/vdu_sample_demo/lib/linux/hi3536:$LD_LIBRARY_PATH
+
+
+
+
+
+
+
+
+arm-hisiv400-linux-g++ ../src/main.c -I/opt/Project/vdu_sample_demo/include/ -L/opt/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/qt-5.9.1/lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_lib/ -L/opt/Project/hi3536/cp_player/build/debug/cp_vdu/ -L/opt/Project/lib/opengles/lib  -L/opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/lib   /opt/Project/hi3536/cp_player/build/debug/cp_lib/libcp_lib.a -lcp_vdu -lQt5Core -lQt5Gui -lQt5Svg -lQt5Widgets -lQt5Charts  -lEGL  -lGLESv1_CM -lGLESv2 -lmali -ldl  -o vdu_sample_demo
+
+
+
+
+
+
+
+
+
+

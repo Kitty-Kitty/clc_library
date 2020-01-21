@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<video>
+  <!--表示须要进行音频处理-->
+  <video_configure>
+    <!--表示视频缓存大小，取值：<=0表示不设置；>0表示设置的值；-->
+    <buffer_size>1024</buffer_size>
+
+    <!--表示每个视频缓存大小，取值：<=0表示不设置；>0表示设置的值；-->
+    <each_buffer_length>10240</each_buffer_length>
+  </video_configure>
+</video>

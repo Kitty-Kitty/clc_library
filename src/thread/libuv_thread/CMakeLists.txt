@@ -1,0 +1,35 @@
+
+
+
+#set src files list
+#set thread directory
+SET(CP_SRC_THREAD_LIBUV_THREAD_DIR ${CP_SRC_THREAD_DIR}/libuv_thread)
+
+
+
+
+#add thread source directory
+AUX_SOURCE_DIRECTORY(${CP_SRC_THREAD_LIBUV_THREAD_DIR} CP_SRC_THREAD_LIBUV_THREAD_FILES_LIST)
+
+
+
+
+
+
+#add source file list
+SET(CP_SRC_THREAD_FILES_LIST 
+	${CP_SRC_THREAD_FILES_LIST} 
+	${CP_SRC_THREAD_LIBUV_THREAD_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_SRC_THREAD_DIR 
+	${CP_SRC_THREAD_DIR} 
+	${CP_SRC_THREAD_LIBUV_THREAD_DIR}
+	
+	PARENT_SCOPE
+	)
+
+	

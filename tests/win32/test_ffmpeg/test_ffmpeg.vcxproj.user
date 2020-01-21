@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>E:\project_work\project\css_player_fix_org\platform\win32\css_player\cp_player\audio_func_module_66394_064-00-01-01-00-000000000000000-99e6806539b6cd88b8ea001314151df3  E:\project_work\project\css_player_fix_org\platform\win32\css_player\cp_player\1828.mp4</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

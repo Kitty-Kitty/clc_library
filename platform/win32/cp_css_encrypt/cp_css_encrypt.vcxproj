@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5BF0E3F0-2BFA-4140-A126-C707A64278ED}</ProjectGuid>
+    <RootNamespace>cp_css_encrypt</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\css_encrypt\;$(SolutionDir)..\..\app\css_encrypt\include\;$(SolutionDir)..\..\app\css_encrypt\src\;$(SolutionDir)..\..\app\css_encrypt\src\dev;$(SolutionDir)..\..\app\css_encrypt\src\core\;$(SolutionDir)..\..\app\css_encrypt\src\func\;$(SolutionDir)..\..\app\css_encrypt\src\dev\hi3536\cipher\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_conf_string.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_core.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_default.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_include.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_info.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_include.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_list.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_type.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_proc.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_version.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_core.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_info.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf_string.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf_string.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_core.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_info.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_cipher.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf_string.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_core.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_info.h" />
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_opetion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\css_encrypt\Changes.txt" />
+    <Text Include="..\..\..\app\css_encrypt\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\dev\hi3531\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\dev\hi3536\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_info.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_module_list.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_proc.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_cipher.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf.c" />
+    <ClCompile Include="..\..\..\app\css_encrypt\src\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_configs.xml" />
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_css_encrypt.xml" />
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_system.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\css_encrypt\configs\cp_log.conf" />
+    <None Include="..\..\..\app\css_encrypt\configs\css.conf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

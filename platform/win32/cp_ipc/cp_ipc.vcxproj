@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E467A6E7-0BC1-41A1-AC6E-1AE1716E2B57}</ProjectGuid>
+    <RootNamespace>cp_ipc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\ipc360\;$(SolutionDir)..\..\app\ipc360\include\;$(SolutionDir)..\..\app\ipc360\src\;$(SolutionDir)..\..\app\ipc360\src\codec;$(SolutionDir)..\..\app\ipc360\src\dev;$(SolutionDir)..\..\app\ipc360\src\core\;$(SolutionDir)..\..\app\ipc360\src\extend\;$(SolutionDir)..\..\app\ipc360\src\filter\;$(SolutionDir)..\..\app\ipc360\src\func\;$(SolutionDir)..\..\app\ipc360\src\func\ipc\;$(SolutionDir)..\..\app\ipc360\src\hook\;$(SolutionDir)..\..\app\ipc360\src\hook\semh\;$(SolutionDir)..\..\app\ipc360\src\process\;$(SolutionDir)..\..\app\ipc360\src\session\;$(SolutionDir)..\..\app\ipc360\src\session\rtp\;$(SolutionDir)..\..\third-party\hi\hi3519\mpp_big-little\include;$(SolutionDir)..\..\third-party\hi\hi3519\mpp_big-little\sample\common;$(SolutionDir)..\..\third-party\ortp-0.24.0\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CP_HI3559_MODE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cp_lib.lib;oRTP.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\oRTP\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\ipc360\configs\cp_codec.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\ipc360\configs\cp_configs.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\ipc360\configs\cp_ipc.xml" />
+    <Xml Include="..\..\..\app\ipc360\configs\cp_system.xml" />
+    <Xml Include="..\..\..\app\ipc360\configs\cp_video.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\ipc360\configs\cp_log.conf" />
+    <None Include="..\..\..\app\ipc360\configs\cp_player_log.conf" />
+    <None Include="..\..\..\app\ipc360\configs\ipc.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_channel_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_conf_string.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_default.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_h264.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_heartbeat.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_include.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_module_include.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_module_type.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_proc.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_rtp.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_socket_data.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_task.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_ipc_version.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_media_play.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\cp_media_server_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\include\css_process_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_hi.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_module_option.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_conf.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_conf_string.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_opetion.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_sample.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_include.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_conf.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_conf_string.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_opetion.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_define.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_sample.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_include.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519\cp_hi3519_dev.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519\cp_hi3519_dev_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519\cp_hi3519_dev_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519\cp_hi3519_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519_vi\cp_hi3519_vi_dev.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519_vi\cp_hi3519_vi_dev_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519_vi\cp_hi3519_vi_dev_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\dev\hi3519_vi\cp_hi3519_vi_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_manager_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_manager_flag.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\cp_ipc_func_module_option.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_conf.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_conf_string.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_pro.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\video\cp_video_func.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\video\cp_video_func_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\video\cp_video_func_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\video\cp_video_func_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\func\video\cp_video_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_block.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_dependent.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_option.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_register.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_stack.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_type.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_handle.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_printf.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\process\cp_ipc_process.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\process\cp_ipc_process_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\process\cp_ipc_process_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\process\cp_ipc_process_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\process\cp_ipc_process_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_manager.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_manager_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_module_list.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\cp_ipc_session_module_type.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session_core.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session_info.h" />
+    <ClInclude Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session_printf.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\acodec.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\dictionary.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\fisheye_calibrate.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hifb.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hiir.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\histitch.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_ae_comm.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_af_comm.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_awb_comm.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_common.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_3a.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_adec.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_aenc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_ai.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_aio.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_ao.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_fisheye.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_isp.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_ive.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_pciv.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_rc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_region.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_sns.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_sys.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_vb.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_venc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_vgs.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_vi.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_video.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_vo.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_comm_vpss.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_debug.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_defines.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_errno.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_i2c.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_io.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_isp_bin.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_isp_debug.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_ive.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_math.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_md.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_mipi.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_rtc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_sns_ctrl.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_spi.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_tde_api.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_tde_errcode.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_tde_type.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_type.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_unf_cipher.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\hi_vreg.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\iniparser.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\isp_dehaze.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\ivs_md.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\list.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mod_ext.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_adec.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_ae.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_aenc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_af.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_ai.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_ao.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_awb.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_fisheye.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_isp.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_ive.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_pciv.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_region.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_sys.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_vb.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_venc.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_vgs.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_vi.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_vo.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\mpi_vpss.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\strlib.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\include\watchdog.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\loadbmp.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm.h" />
+    <ClInclude Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_ive.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_channel_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_h264.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_heartbeat.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_info.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_module_list.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_proc.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_rtp.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_socket_data.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_ipc_task.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_media_codec_info.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\app\cp_media_play.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\cp_ipc_codec_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_codec_conf.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3519\cp_hi3519_av_sample.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_codec_conf.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\codec\hi3559\cp_hi3559_av_sample.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\dev\cp_ipc_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\dev\hi3519\cp_hi3519_dev.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\dev\hi3519_vi\cp_hi3519_vi_dev.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\extend\cp_ipc_extend_module_list.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\filter\cp_ipc_filter_module_list.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\filter\rtp\cp_rtp_filter.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\audio\cp_audio_func_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\cp_ipc_func_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_conf.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\ipc\cp_ipc_func_pro.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\video\cp_video_func.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\func\video\cp_video_func_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_dependent.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\cp_ipc_hook_module_list.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_handle.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\hook\rtp\cp_rtp_hook_printf.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\main.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\process\cp_ipc_process.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\process\cp_ipc_process_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\session\cp_ipc_session_manager.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\session\cp_ipc_session_module_list.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session.c" />
+    <ClCompile Include="..\..\..\app\ipc360\src\session\rtp\cp_rtp_session_printf.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\loadbmp.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_audio.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_isp.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_ive.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_sys.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_venc.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_vi.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_vo.c" />
+    <ClCompile Include="..\..\..\third-party\src\hi\hi3519\mpp_big-little\sample\common\sample_comm_vpss.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\ipc360\Changes.txt" />
+    <Text Include="..\..\..\app\ipc360\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\codec\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\codec\hi3519\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\codec\hi3559\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\dev\hi3519\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\dev\hi3519_vi\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\extend\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\filter\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\filter\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\func\audio\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\func\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\func\ipc\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\func\video\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\hook\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\hook\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\process\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\session\CMakeLists.txt" />
+    <Text Include="..\..\..\app\ipc360\src\session\rtp\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

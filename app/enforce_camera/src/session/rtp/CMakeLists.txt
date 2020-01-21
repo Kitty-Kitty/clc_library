@@ -1,0 +1,30 @@
+
+
+
+#set src files list
+
+
+#add session source directory
+AUX_SOURCE_DIRECTORY(${CP_ECAM_SRC_SESSION_ECAM_DIR} CP_ECAM_SRC_SESSION_ECAM_FILES_LIST)
+
+
+
+
+#add source file list
+SET(CP_ECAM_SRC_SESSION_FILES_LIST 
+	${CP_ECAM_SRC_SESSION_FILES_LIST} 
+	${CP_ECAM_SRC_SESSION_ECAM_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+
+#add include dir
+SET(CP_ECAM_SRC_SESSION_DIR
+    ${CP_ECAM_SRC_SESSION_DIR} 
+    ${CP_ECAM_SRC_SESSION_ECAM_DIR}
+	
+	PARENT_SCOPE
+	)
+	
+	

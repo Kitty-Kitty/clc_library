@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{315754F2-F62A-4DCB-B348-7909259F885E}</ProjectGuid>
+    <RootNamespace>cp_player</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\player\;$(SolutionDir)..\..\app\player\include\;$(SolutionDir)..\..\app\player\src\;$(SolutionDir)..\..\app\player\src\codec;$(SolutionDir)..\..\app\player\src\dev;$(SolutionDir)..\..\app\player\src\core\;$(SolutionDir)..\..\app\player\src\extend\;$(SolutionDir)..\..\app\player\src\filter\;$(SolutionDir)..\..\app\player\src\func\;$(SolutionDir)..\..\app\player\src\hook\;$(SolutionDir)..\..\app\player\src\hook\semh\;$(SolutionDir)..\..\app\player\src\process\;$(SolutionDir)..\..\app\player\src\session\;$(SolutionDir)..\..\app\player\src\session\semh\;$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\ffmpeg-3.2\include;$(SolutionDir)..\..\third-party\src\SDL2-2.0.4\include;$(SolutionDir)..\..\third-party\src\goahead-4.0.0\build\windows-x86-static\inc;$(SolutionDir)..\..\app\player\src\dev\hi3531_dev;$(SolutionDir)..\..\app\player\src\dev\hi3531_dev\hi3531_tde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CRT_SECURE_NO_WARNINGS;inline=__inline;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\ffmpeg-3.2\lib;$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\SDL2\lib;$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\goahead\lib;$(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\unixem\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;swresample.lib;swscale.lib;SDL2.lib;goahead.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\player\include\cp_channel_manager.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_format_media_play.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_media_play_manager.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_media_server_info.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_core.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_default.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_heartbeat.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_include.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_info.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_module_include.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_module_type.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_platform_include.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_proc.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_socket_data.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_task.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_media_play.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_time.h" />
+    <ClInclude Include="..\..\..\app\player\include\cp_player_version.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\cp_player_codec_module_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_channel_layout.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_format.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_general.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_codec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_media_probe.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_video_codec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\cp_player_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_printf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_system.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_include.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_sample.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_audio.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_data.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_audio_format.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_video.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\cp_player_extend_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend_os.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\cp_player_filter_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\memh\cp_memh_filter.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\memh\cp_memh_filter_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\memh\cp_memh_filter_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\ptp\cp_ptp_filter.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\ptp\cp_ptp_filter_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\ptp\cp_ptp_filter_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\ptp\cp_ptp_header.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\semh\cp_semh_filter.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\semh\cp_semh_filter_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\filter\semh\cp_semh_filter_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\audio\cp_audio_func_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_manager_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_manager_flag.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\cp_player_func_module_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\player\cp_player_func.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\player\cp_player_func_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\player\cp_player_func_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\player\cp_player_func_thread.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\render\cp_render_func.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\render\cp_render_func_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\render\cp_render_func_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\render\cp_render_func_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\render\cp_render_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_conf.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_conf_string.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_frame_process.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\func\video\cp_video_func_proc.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_gmf.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_block.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_dependent.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_option.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_register.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_stack.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_hook_type.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\cp_css_std.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_hook.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_handle.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_printf.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_make_gmf.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_parse_gmf.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_request.h" />
+    <ClInclude Include="..\..\..\app\player\src\hook\semh\cp_semh_request_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\process\cp_player_process.h" />
+    <ClInclude Include="..\..\..\app\player\src\process\cp_player_process_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\process\cp_player_process_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\process\cp_player_process_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\process\cp_player_process_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_manager.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_manager_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_module_list.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\cp_css_session_module_type.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\semh\cp_semh_session.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\semh\cp_semh_session_core.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\semh\cp_semh_session_info.h" />
+    <ClInclude Include="..\..\..\app\player\src\session\semh\cp_semh_session_printf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\player\src\app\cp_channel_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_format_media_play.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_media_play_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_heartbeat.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_info.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_socket_data.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_task.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_media_play.c" />
+    <ClCompile Include="..\..\..\app\player\src\app\cp_player_time.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\cp_player_codec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\cp_player_codec_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\cp_player_codec_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_channel_layout.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_format.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_codec_general.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_audio_codec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_media_probe.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\ffmpeg\cp_ffmpeg_av_video_codec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_manager_info.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\cp_hi3531_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec.c" />
+    <ClCompile Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\cp_hi3531_vdec_codec_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\cp_player_dev.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\cp_player_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\cp_player_dev_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_manager_info.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\cp_hi3531_dev_system.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\cp_hi3531_sdl_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\cp_hi3531_tde_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\cp_hi3531_vo_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\cp_hi3531_vpss_sample.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_audio.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_data.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_audio_format.c" />
+    <ClCompile Include="..\..\..\app\player\src\dev\sdl\cp_sdl_av_dev_video.c" />
+    <ClCompile Include="..\..\..\app\player\src\extend\cp_player_extend.c" />
+    <ClCompile Include="..\..\..\app\player\src\extend\cp_player_extend_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\extend\cp_player_extend_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend.c" />
+    <ClCompile Include="..\..\..\app\player\src\extend\web_goahead\cp_web_goahead_extend_os.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\cp_player_filter.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\cp_player_filter_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\cp_player_filter_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\memh\cp_memh_filter.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\ptp\cp_ptp_filter.c" />
+    <ClCompile Include="..\..\..\app\player\src\filter\semh\cp_semh_filter.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\audio\cp_audio_func.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\audio\cp_audio_func_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\audio\cp_audio_func_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\audio\cp_audio_func_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\cp_player_func_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\player\cp_player_func.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\player\cp_player_func_thread.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\ptp\cp_ptp_func.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\ptp\cp_ptp_func_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\render\cp_render_func.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\render\cp_render_func_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\video\cp_video_func.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\video\cp_video_func_conf.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\video\cp_video_func_frame_process.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\video\cp_video_func_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\func\video\cp_video_func_proc.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_gmf.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_hook.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_hook_dependent.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_hook_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_hook_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\cp_css_std.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_hook.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_handle.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_hook_printf.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_make_gmf.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_parse_gmf.c" />
+    <ClCompile Include="..\..\..\app\player\src\hook\semh\cp_semh_request.c" />
+    <ClCompile Include="..\..\..\app\player\src\main.c" />
+    <ClCompile Include="..\..\..\app\player\src\process\cp_player_process.c" />
+    <ClCompile Include="..\..\..\app\player\src\process\cp_player_process_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\session\cp_css_session_manager.c" />
+    <ClCompile Include="..\..\..\app\player\src\session\cp_css_session_module_list.c" />
+    <ClCompile Include="..\..\..\app\player\src\session\semh\cp_semh_session.c" />
+    <ClCompile Include="..\..\..\app\player\src\session\semh\cp_semh_session_printf.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\player\configs\cp_log.conf" />
+    <None Include="..\..\..\app\player\configs\css.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\player\Changes.txt" />
+    <Text Include="..\..\..\app\player\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\codec\ffmpeg\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\codec\hi3531\hi3531_vdec\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\hi3531_dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_sdl\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_tde\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vo\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\hi3531_dev\hi3531_vpss\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\dev\sdl\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\extend\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\extend\web_goahead\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\filter\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\filter\memh\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\filter\ptp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\filter\semh\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\func\audio\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\func\player\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\func\ptp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\func\render\CMakeLists.txt" />
+    <Text Include="..\..\..\app\player\src\func\video\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\player\configs\cp_codec.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\player\configs\cp_configs.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\player\configs\cp_player.xml" />
+    <Xml Include="..\..\..\app\player\configs\cp_ptp.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\player\configs\cp_system.xml" />
+    <Xml Include="..\..\..\app\player\configs\cp_video.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\player\configs\hi3531\cp_hi3531_hdmi.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\..\app\player\configs\hi3531\cp_hi3531_system.xml" />
+    <Xml Include="..\..\..\app\player\configs\hi3531\cp_hi3531_vdec.xml" />
+    <Xml Include="..\..\..\app\player\configs\hi3531\cp_hi3531_vo.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

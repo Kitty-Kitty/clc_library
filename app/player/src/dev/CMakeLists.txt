@@ -1,0 +1,36 @@
+#set src files list
+#set player DEV directory
+
+
+#add player DEV source directory
+AUX_SOURCE_DIRECTORY(${CP_PLAYER_SRC_DEV_DIR} CP_PLAYER_SRC_DEV_PLAYER_FILES_LIST)
+
+
+IF(${CP_PLATFORM} STREQUAL "hisiv100")
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_DEV_DIR}/hi3531_dev)
+
+ELSE()
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_DEV_DIR}/sdl)
+
+ENDIF()
+
+
+
+#add source file list
+SET(CP_PLAYER_EXECUTABLE_FILES_LIST 
+	${CP_PLAYER_EXECUTABLE_FILES_LIST} 
+	${CP_PLAYER_SRC_DEV_PLAYER_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_PLAYER_INCLUDE_DIR ${CP_PLAYER_INCLUDE_DIR} 
+	${CP_PLAYER_SRC_DEV_DIR}
+
+	PARENT_SCOPE
+	)

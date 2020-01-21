@@ -1,0 +1,113 @@
+/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400
+
+
+#±‡“Îzlog
+make CC=arm-hisiv400-linux-gcc
+
+make PREFIX=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/zlog install
+
+
+#±‡“Îlibiconv
+chmod +x configure
+./configure --host=arm-linux  --enable-shared --enable-static  CC=arm-hisiv400-linux-gcc AR=arm-hisiv400-linux-ar LD=arm-hisiv400-linux-ld  ANLIB=arm-hisiv400-linux-ranlib --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14
+
+
+
+#±‡“Îzlib
+chmod +x configure
+./configure --static --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/zlib-1.2.8
+make CC=arm-hisiv400-linux-gcc AR=arm-hisiv400-linux-ar LD=arm-hisiv400-linux-ld ANLIB=arm-hisiv400-linux-ranlib
+make install
+
+
+#±‡“Îxz
+chmod +x configure
+./configure --target=arm-hisiv400-linux --host=arm-hisiv400-linux --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/xz-5.2.2/
+autoreconf -ivf
+make && make install
+
+
+#±‡“Îlibxml2
+chmod +x configure
+./configure --host=arm-linux --target=arm-linux CC=arm-hisiv400-linux-gcc AR=arm-hisiv400-linux-ar LD=arm-hisiv400-linux-ld  ANLIB=arm-hisiv400-linux-ranlib Z_CFLAGS="-I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/zlib-1.2.8/include -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/zlib-1.2.8/lib" LZMA_CFLAGS="-I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/xz-5.2.2/include -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/xz-5.2.2/lib" ICU_CFLAGS="-I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/include -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/lib" --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libxml2-2.9.4 --with-zlib=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/zlib-1.2.8 --with-iconv=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14 --with-lzma="/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/xz-5.2.2" --without-python
+make && make install
+
+
+
+#±‡“Îlibuv
+./autogen.sh
+chmod +x configure
+./configure --host=arm-hisiv400-linux  CC=arm-hisiv400-linux-gcc AR=arm-hisiv400-linux-ar LD=arm-hisiv400-linux-ld  ANLIB=arm-hisiv400-linux-ranlib  --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libuv-v1.11.0/
+make && make install
+
+
+
+#±‡“Îiniparser
+cd linux/
+make CC=arm-hisiv400-linux-gcc
+
+make PREFIX=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/iniparser/ install
+#src÷–¥˙¬Î÷±Ω”±‡“Î¥ÌŒÛ£¨«ÎΩ‚—πsrc/archive_source/iniparser-master.zip∫Û±‡“Î
+
+
+
+#±‡“Îgmf_parser
+
+
+
+
+#±‡“Îlibuuid
+chmod +x configure
+./configure  --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libuuid-1.0.3  --host=arm-hisiv400-linux  --enable-static --enable-shared --with-gnu-ld
+make && make install
+
+
+
+
+#±‡“Îliblfds
+cd third-party/src/liblfds/liblfds7.1.0_Linux/liblfds710/build/gcc_gnumake_arm-hisiv400-linux
+make
+
+
+
+
+#±‡“Îtslib
+./autogen.sh
+echo "ac_cv_func_malloc_0_nonnull=yes"> arm-hisiv400-linux.cache
+./configure  --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/tslib-1.4  --host=arm-hisiv400-linux  --cache-file=arm-hisiv400-linux.cache --enable-static --enable-shared 
+make && make install
+
+
+#±‡“Îfreetype
+chmod +x configure
+chmod +x builds/unix/configure
+export CC=arm-hisiv400-linux-gcc
+export CXX=arm-hisiv400-linux-g++
+./configure --host=arm-hisiv400-linux --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/freetype-2.4.8  --enable-static --enable-shared 
+make && make install
+#src÷–¥˙¬Î÷±Ω”±‡“Î¥ÌŒÛ£¨«ÎΩ‚—πsrc/archive_source/freetype-2.4.8.tar.gz∫Û±‡“Î
+
+
+
+#±‡“ÎSDL2.0
+chmod +x configure
+./configure --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL2-2.0.4 --host=arm-hisiv400-linux --build=i386 --with-gnu-ld --disable-video-nanox --disable-video-qtopia --disable-pulseaudio --disable-video-photon --disable-video-ggi --disable-video-svga --disable-video-aalib --disable-video-dummy --disable-video-dga --disable-arts --disable-esd --disable-alsa --disable-video-x11 --disable-nasm --enable-joystick --enable-input-tslib --enable-video-fbcon CPPFLAGS="-I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/include -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/tslib-1.4/include" LDFLAGS="-L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/lib -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/tslib-1.4/lib -lts -liconv"
+make && make install
+
+
+
+#±‡“ÎSDL2_ttf
+chmod +x configure
+./configure --host=arm-hisiv400-linux --prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL2_ttf-2.0.14 --enable-shared --enable-static --disable-SDLtest --with-freetype-prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/freetype-2.4.8/ --with-SDL-prefix=/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL2-2.0.4/ CFLAG="-I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/include -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/tslib-1.4/include -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL-1.2.15/include -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL-1.2.15/include/SDL -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/freetype-2.4.8/include -I/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/freetype-2.4.8/include/freetype2" LDFLAGS="-L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/libiconv-1.14/lib -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/tslib-1.4/lib -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/SDL2-2.0.4/lib -L/home/f/Project/hi3536/cp_player/third-party/lib/arm-hisiv400/freetype-2.4.8/lib -lSDL2 -lts -liconv -lfreetype"
+make && make install
+
+
+
+
+
+
+
+
+
+
+

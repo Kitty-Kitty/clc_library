@@ -1,0 +1,22 @@
+#set src files list
+#set vdu_demo func directory
+
+
+#add vdu_demo func source directory
+AUX_SOURCE_DIRECTORY(${CP_VDU_DEMO_SRC_FUNC_DIR} CP_VDU_DEMO_SRC_FUNC_FILES_LIST)
+
+
+#add source file list
+SET(CP_VDU_DEMO_EXECUTABLE_FILES_LIST 
+	${CP_VDU_DEMO_EXECUTABLE_FILES_LIST} 
+	${CP_VDU_DEMO_SRC_FUNC_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_VDU_DEMO_INCLUDE_DIR ${CP_VDU_DEMO_INCLUDE_DIR} 
+	${CP_VDU_DEMO_SRC_FUNC_DIR}
+
+	PARENT_SCOPE
+	)

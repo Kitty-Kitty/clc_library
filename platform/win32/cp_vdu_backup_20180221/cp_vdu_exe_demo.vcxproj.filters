@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{87fc6b72-e6de-419a-b0a7-b0e64c414df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{7b618916-4b27-472d-9af7-0fb41910b0d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec">
+      <UniqueIdentifier>{e25351a3-8a7f-4435-9291-213f8e7acda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev">
+      <UniqueIdentifier>{6614429a-9a10-469a-856a-cc735d5ec302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\func">
+      <UniqueIdentifier>{783f15d1-6fae-499e-a356-1bb854952114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\func\vdu">
+      <UniqueIdentifier>{2dd0dc31-a7fb-4c01-adb6-72d2ce9b45c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{353a0165-a3bd-4d59-8ea8-52ee19175ac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec\hi3536">
+      <UniqueIdentifier>{4196f6ab-c92d-4ffb-b4fc-0c03910d056d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev\hi3536">
+      <UniqueIdentifier>{ef66d59e-714f-4ae9-b895-b6ce4d59169f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec\qt_svg">
+      <UniqueIdentifier>{f9be0811-1801-483c-bef8-082313d0659c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_channel_manager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_default.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_info.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_list.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_proc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_core.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_module_list.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_module_option.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_core.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_module_list.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_module_option.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_core.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_flag.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_info.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_module_list.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_module_option.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func.h">
+      <Filter>src\func\vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_core.h">
+      <Filter>src\func\vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_info.h">
+      <Filter>src\func\vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_thread.h">
+      <Filter>src\func\vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec.h">
+      <Filter>src\codec\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_core.h">
+      <Filter>src\codec\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_info.h">
+      <Filter>src\codec\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_opetion.h">
+      <Filter>src\codec\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_core.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_info.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_opetion.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_app.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_core.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_info.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_process.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_channel.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_include.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_printf.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_rect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_option.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_error.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_unit.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_option_function.h">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_pixel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_vector_stream_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_api.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_log.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_status.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_process_struct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_process_struct_proc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager.c">
+      <Filter>src\func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func.c">
+      <Filter>src\func\vdu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_thread.c">
+      <Filter>src\func\vdu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_channel_manager.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_media_codec_info.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_info.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_module_list.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_proc.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_task.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec.c">
+      <Filter>src\codec\hi3536</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev.c">
+      <Filter>src\dev\hi3536</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_app.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec.c">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_process.cpp">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_channel.cpp">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_unit.cpp">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_option_function.cpp">
+      <Filter>src\codec\qt_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_api.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_status.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_process_struct_proc.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\CMakeLists.txt">
+      <Filter>src\codec</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\dev\CMakeLists.txt">
+      <Filter>src\dev</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\func\CMakeLists.txt">
+      <Filter>src\func</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\core\CMakeLists.txt">
+      <Filter>src\core</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\CMakeLists.txt">
+      <Filter>src\codec\hi3536</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\CMakeLists.txt">
+      <Filter>src\dev\hi3536</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\CMakeLists.txt">
+      <Filter>src\codec\qt_svg</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

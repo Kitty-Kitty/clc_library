@@ -1,0 +1,38 @@
+#set src files list
+#set player codecs directory
+
+
+#add player codecs source directory
+AUX_SOURCE_DIRECTORY(${CP_PLAYER_SRC_CODECS_DIR} CP_PLAYER_SRC_CODECS_PLAYER_FILES_LIST)
+
+
+IF(${CP_PLATFORM} STREQUAL "hisiv100")
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_CODECS_DIR}/hi3531)
+
+ELSE()
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_CODECS_DIR}/ffmpeg)
+
+ENDIF()
+
+
+#add source file list
+SET(CP_PLAYER_EXECUTABLE_FILES_LIST 
+	${CP_PLAYER_EXECUTABLE_FILES_LIST} 
+	${CP_PLAYER_SRC_CODECS_PLAYER_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_PLAYER_INCLUDE_DIR ${CP_PLAYER_INCLUDE_DIR} 
+	${CP_PLAYER_SRC_CODECS_DIR}
+
+	PARENT_SCOPE
+	)
+	
+	
+	

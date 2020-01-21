@@ -1,0 +1,916 @@
+/**************************************************************************
+
+Copyright:novigo
+
+Author:fangzhenmu@novigo.com.cn
+
+Date:2014-2-27
+
+Description:std defined
+
+**************************************************************************/
+
+
+
+
+
+
+
+#ifndef	_CSS_GMP_SEMH_COMMAND_H_
+#define _CSS_GMP_SEMH_COMMAND_H_
+
+
+
+//********************中心服务器接口指令(10000--19999)*********************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口===================================
+//--注册--
+#define	GMP_SEMH_CENTER_CMD_REGISTER									10000
+#define	GMP_SEMH_CENTER_CMD_REGISTER_RETURN								10001
+
+
+//--取消注册--
+#define	GMP_SEMH_CENTER_CMD_CANCEL_REGISTER								10002
+#define	GMP_SEMH_CENTER_CMD_CANCEL_REGISTER_RETURN						10003
+
+
+//--心跳保活--
+#define	GMP_SEMH_CENTER_CMD_LIFE_HEART									10004
+#define	GMP_SEMH_CENTER_CMD_LIFE_HEART_RETURN							10005
+
+
+//--异常上报--
+#define	GMP_SEMH_CENTER_CMD_EXCEPTION									10006
+#define	GMP_SEMH_CENTER_CMD_EXCEPTION_RETURN							10007
+
+
+//--广播查询信息--
+#define	GMP_SEMH_CENTER_CMD_BROADCAST_QUERY								10008
+#define	GMP_SEMH_CENTER_CMD_BROADCAST_QUERY_RETURN						10009
+
+
+//--软件更新--
+#define	GMP_SEMH_CENTER_CMD_UPDATE_NOTIFY								10100
+#define	GMP_SEMH_CENTER_CMD_UPDATE_NOTIFY_RETURN						10101
+
+
+
+//--获取更新包--
+#define	GMP_SEMH_CENTER_CMD_GET_UPDATE_PACKET							10102
+#define	GMP_SEMH_CENTER_CMD_GET_UPDATE_PACKET_RETURN					10103
+
+
+
+//============================媒体接口(12000--12999)=====================
+//-------------------媒体管理接口(12000--12099)--------------------------
+//--媒体注册接口请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_REGISTER								12000
+#define	GMP_SEMH_CENTER_CMD_MEDIA_REGISTER_RETURN						12001
+
+
+//--媒体取消注册请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_CANCLE_REGISTER						12002
+#define	GMP_SEMH_CENTER_CMD_MEDIA_CANCLE_REGISTER_RETURN				12003
+
+//--媒体查询请求
+#define	GMP_SEMH_CENTER_CMD_MEDIA_QUERY									12004
+#define GMP_SEMH_CENTER_CMD_MEDIA_QUERY_RETURN							12005
+
+
+//--媒体更新请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_UPDATE								12006
+#define	GMP_SEMH_CENTER_CMD_MEDIA_UPDATE_RETURN							12007
+
+
+//--媒体背景上传请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_UPLOAD								12100
+#define	GMP_SEMH_CENTER_CMD_MEDIA_UPLOAD_RETURN							12101
+
+//--媒体查询背景图片信息请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PICTURE_QUERY							12102
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PICTURE_QUERY_RETURN					12103
+
+
+
+#define GMP_SEMH_CENTER_CMD_WORD_PICTURE_UPLOAD							12200
+#define	GMP_SEMH_CENTER_CMD_WORD_PICTURE_UPLOAD_RETURN					12201
+
+
+
+
+
+//-------------------播放管理接口(12300--12399)--------------------------
+//--播放创建请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_REQUEST							12300
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_REQUEST_RETURN					12301
+
+
+//--播放删除请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_STOP									12302
+#define	GMP_SEMH_CENTER_CMD_MEDIA_STOP_RETURN							12303
+
+
+
+//--播放查询请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_QUERY							12304
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_QUERY_RETURN						12305
+
+
+//--播放删除请求--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_UPDATE							12306
+#define	GMP_SEMH_CENTER_CMD_MEDIA_PLAY_UPDATE_RETURN					12307
+
+
+//--媒体关闭通知--
+#define	GMP_SEMH_CENTER_CMD_MEDIA_CLOSE_NOTIFY							12308
+#define	GMP_SEMH_CENTER_CMD_MEDIA_CLOSE_NOTIFY_RETURN					12309
+
+
+
+//-------------------编码设备接口(13000-13999)--------------------------
+//--设备注册接口--
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_REGISTER				13000
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_REGISTER_RETURN		13001
+
+//--设备更新接口--
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_UPDATE				13002
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_UPDATE_RETURN			13003
+
+//--设备取消接口--
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_CANCLE_REGISTER		13002
+#define	GMP_SEMH_CENTER_CMD_ACCESS_CHANNEL_DEVICE_CANCLE_REGISTER_RETURN 13003
+
+
+//********************中间件服务器接口指令(20000--29999)******************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(20000--20999)======================
+//--心跳保活--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_LIFE_HEART							20000
+#define	GMP_SEMH_ACCESS_SERVER_CMD_LIFE_HEART_RETURN					20001
+
+//--软件更新--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_UPDATE_NOTIFY						20100
+#define	GMP_SEMH_ACCESS_SERVER_CMD_UPDATE_NOTIFY_RETURN					20101
+
+//--日志信息设置--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_LOG								20200
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_LOG_RETURN						20201
+
+//--日志文件获取--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_LOG								20202
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_LOG_RETURN						20203
+
+//--日志文件删除--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_DELETE_LOG							20204
+#define	GMP_SEMH_ACCESS_SERVER_CMD_DELETE_LOG_RETURN					20205
+
+//--日志列表查询--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_QUERY_LOG							20206
+#define	GMP_SEMH_ACCESS_SERVER_CMD_QUERY_LOG_RETURN						20207
+
+
+
+
+//============================配置接口(21000--21999)=====================
+//--获取设备信息--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_DEV_INFO							21000
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_DEV_INFO_RETURN					21001
+
+
+//--设置设备信息--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_DEV_INFO							21002
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_DEV_INFO_RETURN					21003
+
+
+//--启用设备--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_START_DEV							21004
+#define	GMP_SEMH_ACCESS_SERVER_CMD_START_DEV_RETURN						21005
+
+
+//--停用设备--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_STOP_DEV								21006
+#define	GMP_SEMH_ACCESS_SERVER_CMD_STOP_DEV_RETURN						21007
+
+
+//--网络配置--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_NETWORK							21200
+#define	GMP_SEMH_ACCESS_SERVER_CMD_SET_NETWORK_RETURN					21201
+
+
+
+
+//============================媒体接口(22000--22999)=====================
+//-----------------------媒体管理接口(22000--22099)----------------------
+//--媒体添加请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_MEDIA_ADD							22000
+#define	GMP_SEMH_ACCESS_SERVER_CMD_MEDIA_ADD_RETURN						22001
+
+
+//--媒体删除请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_MEDIA_REMOVE							22002
+#define	GMP_SEMH_ACCESS_SERVER_CMD_MEDIA_REMOVE_RETURN					22003
+
+
+//--媒体获取信息请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_MEDIA_INFO						22004
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_MEDIA_INFO_RETURN				22005
+
+
+//--媒体更新请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_UPDATE_MEDIA_INFO					22006
+#define	GMP_SEMH_ACCESS_SERVER_CMD_UPDATE_MEDIA_INFO_RETURN				22007
+
+
+
+
+//-----------------------媒体播放接口(22100--22199)----------------------
+//--媒体分配通道请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_CREATE_CHANNEL						22100
+#define	GMP_SEMH_ACCESS_SERVER_CMD_CREATE_CHANNEL_RETURN				22101
+
+
+//--媒体通道确认请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_ACCEPT_CHANNEL						22102
+#define	GMP_SEMH_ACCESS_SERVER_CMD_ACCEPT_CHANNEL_RETURN				22103
+
+
+//--媒体释放通道请求--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_DESTROY_CHANNEL						22104
+#define	GMP_SEMH_ACCESS_SERVER_CMD_DESTROY_CHANNEL_RETURN				22105
+
+
+//--媒体关闭通道通知--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_CLOSE_CHANNEL_NOTIFY					22106
+#define	GMP_SEMH_ACCESS_SERVER_CMD_CLOSE_CHANNEL_NOTIFY_RETURN			22107
+
+
+//--媒体通道信息查询--
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_CHANNEL_INFO						22108
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_CHANNEL_INFO_RETURN				22109
+
+
+
+//--编码器设备添加
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_SET		23000
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_SET_RETURN	23001
+
+
+//--编码器设备更新
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_UPDATE			23002
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_UPDATE_RETURN	23003
+
+//--编码器设备删除
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_REMOVE			23004
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_CHANNEL_DEVICE_REMOVE_RETURN	23005
+
+
+//--SIP平台设备添加
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_SET			23100
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_SET_RETURN		23101
+
+//--SIP平台设备更新
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_UPDATE			23102
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_UPDATE_RETURN	23103
+
+//--SIP平台设备删除
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_DELETE			23104
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_DELETE_RETURN	23105
+
+//--SIP平台设备查询
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_QUERY			23106
+#define	GMP_SEMH_ACCESS_SERVER_CMD_GET_ACCESS_SIP_DEVICE_QUERY_RETURN	23107
+
+
+
+//*******************媒体服务器接口指令(30000--39999)**********************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(30000--30999)======================
+//--心跳保活--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_LIFE_HEART							30000
+#define	GMP_SEMH_MEDIA_SERVER_CMD_LIFE_HEART_RETURN						30001
+
+//--软件更新--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_UPDATE_NOTIFY							30100
+#define	GMP_SEMH_MEDIA_SERVER_CMD_UPDATE_NOTIFY_RETURN					30101
+
+
+//--日志信息设置--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_LOG								30200
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_LOG_RETURN						30201
+
+//--日志文件获取--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_GET_LOG								30202
+#define	GMP_SEMH_MEDIA_SERVER_CMD_GET_LOG_RETURN						30203
+
+//--日志文件删除--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_DELETE_LOG							30204
+#define	GMP_SEMH_MEDIA_SERVER_CMD_DELETE_LOG_RETURN						30205
+
+//--日志列表查询--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_QUERY_LOG								30206
+#define	GMP_SEMH_MEDIA_SERVER_CMD_QUERY_LOG_RETURN						30207
+
+
+//============================配置接口(31000--31999)=====================
+//--获取设备信息--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_GET_DEV_INFO							31000
+#define	GMP_SEMH_MEDIA_SERVER_CMD_GET_DEV_INFO_RETURN					31001
+
+
+//--设置设备信息--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_DEV_INFO							31002
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_DEV_INFO_RETURN					31003
+
+
+//--启用设备--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_START_DEV								31004
+#define	GMP_SEMH_MEDIA_SERVER_CMD_START_DEV_RETURN						31005
+
+
+//--停用设备--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_STOP_DEV								31006
+#define	GMP_SEMH_MEDIA_SERVER_CMD_STOP_DEV_RETURN						31007
+
+
+//--网络配置--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_NETWORK							31200
+#define	GMP_SEMH_MEDIA_SERVER_CMD_SET_NETWORK_RETURN					31201
+
+
+//============================媒体接口(32000--32999)=====================
+//-------------------媒体播放转发接口(32100--32199)----------------------
+//--媒体播放请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_PLAY							32100
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_PLAY_RETURN						32101
+
+
+//--媒体更新播放请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_PLAY_UPDATE						32102
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_PLAY_UPDATE_RETURN				32103
+
+
+//--媒体更新播放层请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_LAYER_UPDATE					32104
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_LAYER_UPDATE_RETURN				32105
+
+
+//--媒体停止请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_STOP							32106
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_STOP_RETURN						32107
+
+
+//--媒体关闭通知--	
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_CLOSE_NOTIFY					32108
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_CLOSE_NOTIFY_RETURN				32109
+
+
+//-------------------媒体信息查询接口(32200--32299)----------------------
+//--媒体播放通道查询--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_GET_CHANNEL_INFO				32200
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_GET_CHANNEL_INFO_RETURN			32201
+
+
+//-------------------媒体预览接口(32400--32499)----------------------
+//--媒体预览请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEIDA_VIEW_PLAY						32400
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEIDA_VIEW_PLAY_RETURN				32401
+
+
+//--媒体预览更新请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_VIEW_UPDATE						32402
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_VIEW_UPDATE_RETURN				32403
+
+
+//--媒体预览关闭请求--
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_VIEW_STOP						32406
+#define	GMP_SEMH_MEDIA_SERVER_CMD_MEDIA_VIEW_STOP_RETURN				32407
+
+
+
+
+
+
+
+//*******************播放前端接口指令(40000--49999)**********************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(40000-40999)======================
+//--心跳保活--
+#define	GMP_SEMH_PLAYER_CMD_LIFE_HEART								40000
+#define	GMP_SEMH_PLAYER_CMD_LIFE_HEART_RETURN						40001
+
+
+//--软件更新--
+#define	GMP_SEMH_PLAYER_CMD_UPDATE_NOTIFY							40100
+#define	GMP_SEMH_PLAYER_CMD_UPDATE_NOTIFY_RETURN					40101
+
+
+//--日志信息设置--
+#define	GMP_SEMH_PLAYER_CMD_SET_LOG									40200
+#define	GMP_SEMH_PLAYER_CMD_SET_LOG_RETURN							40201
+
+//--日志文件获取--
+#define	GMP_SEMH_PLAYER_CMD_GET_LOG									40202
+#define	GMP_SEMH_PLAYER_CMD_GET_LOG_RETURN							40203
+
+//--日志文件删除--
+#define	GMP_SEMH_PLAYER_CMD_DELETE_LOG								40204
+#define	GMP_SEMH_PLAYER_CMD_DELETE_LOG_RETURN						40205
+
+//--日志列表查询--
+#define	GMP_SEMH_PLAYER_CMD_QUERY_LOG								40206
+#define	GMP_SEMH_PLAYER_CMD_QUERY_LOG_RETURN						40207
+
+
+//============================配置接口(41000--41999)=====================
+//--获取设备信息--
+#define	GMP_SEMH_PLAYER_CMD_GET_DEV_INFO							41000
+#define	GMP_SEMH_PLAYER_CMD_GET_DEV_INFO_RETURN						41001
+
+
+//--设置设备信息--
+#define	GMP_SEMH_PLAYER_CMD_SET_DEV_INFO							41002
+#define	GMP_SEMH_PLAYER_CMD_SET_DEV_INFO_RETURN						41003
+
+
+//--启用设备--
+#define	GMP_SEMH_PLAYER_CMD_START_DEV								41004
+#define	GMP_SEMH_PLAYER_CMD_START_DEV_RETURN						41005
+
+
+//--停用设备--
+#define	GMP_SEMH_PLAYER_CMD_STOP_DEV								41006
+#define	GMP_SEMH_PLAYER_CMD_STOP_DEV_RETURN							41007
+
+
+
+//--屏幕测试--
+#define	GMP_SEMH_PLAYER_CMD_TEST_DEV								41008
+#define	GMP_SEMH_PLAYER_CMD_TEST_DEV_RETURN							41009
+
+
+
+//--设置播放前端背景图片--
+#define	GMP_SEMH_PLAYER_CMD_SET_BACKGROUND							41100
+#define	GMP_SEMH_PLAYER_CMD_SET_BACKGROUND_RETURN					41101
+
+//--清除播放前端背景图片
+#define GMP_SEMH_PLAYER_CMD_CLEAR_BACKGROUND						41102
+#define GMP_SEMH_PLAYER_CMD_CLEAR_BACKGROUND_RETURN					41103
+
+//--设置播放前端字幕信息--
+#define	GMP_SEMH_PLAYER_CMD_SET_WORD								41104
+#define	GMP_SEMH_PLAYER_CMD_SET_WORD_RETURN							41105
+
+//--清除播放前端字幕信息
+#define GMP_SEMH_PLAYER_CMD_CLEAR_WORD								41106
+#define GMP_SEMH_PLAYER_CMD_CLEAR_WORD_RETURN						41107
+
+//--设置播放前端选择状态
+#define GMP_SEMH_PLAYER_CMD_SET_FOCUS								41108
+#define GMP_SEMH_PLAYER_CMD_SET_FOCUS_RETURN						41109
+
+//--播放前端图片刷新
+#define GMP_SEMH_PLAYER_CMD_REFLESH_PICTURE							41110
+#define GMP_SEMH_PLAYER_CMD_REFLESH_PICTURE_RETURN					41111
+
+
+//--网络配置--
+#define	GMP_SEMH_PLAYER_CMD_SET_NETWORK								41200
+#define	GMP_SEMH_PLAYER_CMD_SET_NETWORK_RETURN						41201
+
+
+
+//--离线获取设备口令
+#define GMP_SEMH_PLAYER_CMD_OFFLINE_GET_PASSWORD					41400
+#define GMP_SEMH_PLAYER_CMD_OFFLINE_GET_PASSWORD_RETURN				41401
+
+//--离线设置设备口令
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_SET_PASSWORD					41402
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_SET_PASSWORD_RETURN				41403
+
+//--离线更新获取设备口令
+#define GMP_SEMH_PLAYER_CMD_OFFLINE_UPDATE_PASSWORD					41404
+#define GMP_SEMH_PLAYER_CMD_OFFLINE_UPDATE_PASSWORD_RETURN			41405
+
+
+//--离线获取设备信息
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_GET_INFORMATION					41406
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_GET_INFORMATION_RETURN			41407
+
+
+//--离线设置设备信息
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_SET_INFORMATION					41408
+#define	GMP_SEMH_PLAYER_CMD_OFFLINE_SET_INFORMATION_RETURN			41409
+
+
+
+//--设置音频设备信息--
+#define	GMP_SEMH_PLAYER_CMD_SET_AUDIO_DEV_INFO						45102
+#define	GMP_SEMH_PLAYER_CMD_SET_AUDIO_DEV_INFO_RETURN				45103
+
+
+//============================媒体接口(42000--42999)=====================
+//-------------------媒体播放转发接口(42100--42199)----------------------
+//--媒体播放请求--
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_PLAY								42100
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_PLAY_RETURN						42101
+
+
+//--媒体更新播放请求--
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_PLAY_UPDATE						42102
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_PLAY_UPDATE_RETURN				42103
+
+
+//--媒体更新播放层请求--
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_LAYER_UPDATE						42104
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_LAYER_UPDATE_RETURN				42105
+
+
+//--媒体停止请求--
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_STOP								42106
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_STOP_RETURN						42107
+
+
+//--媒体关闭通知--	
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_CLOSE_NOTIFY						42108
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_CLOSE_NOTIFY_RETURN				42109
+
+
+//-------------------媒体信息查询接口(42200--42299)----------------------
+//--媒体播放通道查询--
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_GET_CHANNEL_INFO					42200
+#define	GMP_SEMH_PLAYER_CMD_MEDIA_GET_CHANNEL_INFO_RETURN			42201
+
+
+
+
+
+
+
+
+
+
+
+//*******************播放音频前端接口指令(45000--45999)**********************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(45000-45099)======================
+//--心跳保活--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_LIFE_HEART								45000
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_LIFE_HEART_RETURN							45001
+
+
+//--软件更新--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_UPDATE_NOTIFY								45010
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_UPDATE_NOTIFY_RETURN						45011
+
+
+//--日志信息设置--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_SET_LOG									45020
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_SET_LOG_RETURN							45021
+
+//--日志文件获取--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_GET_LOG									45022
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_GET_LOG_RETURN							45023
+
+//--日志文件删除--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_DELETE_LOG								45024
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_DELETE_LOG_RETURN							45025
+
+//--日志列表查询--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_QUERY_LOG									45026
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_QUERY_LOG_RETURN							45027
+
+
+//============================配置接口(45100--45199)=====================
+//--获取设备信息--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_GET_DEV_INFO								45100
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_GET_DEV_INFO_RETURN						45101
+
+
+//--设置设备信息--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_SET_DEV_INFO								45102
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_SET_DEV_INFO_RETURN						45103
+
+
+//--启用设备--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_START_DEV									45104
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_START_DEV_RETURN							45105
+
+
+//--停用设备--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_STOP_DEV									45106
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_STOP_DEV_RETURN							45107
+
+
+//============================媒体接口(45200--45299)=====================
+//-------------------媒体播放转发接口(45200--45299)----------------------
+//--媒体播放请求--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_PLAY								45200
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_PLAY_RETURN							45201
+
+
+//--媒体更新播放请求--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_PLAY_UPDATE							45202
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_PLAY_UPDATE_RETURN					45203
+
+
+//--媒体更新播放层请求--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_LAYER_UPDATE						45204
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_LAYER_UPDATE_RETURN					45205
+
+
+//--媒体停止请求--
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_STOP								45206
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_STOP_RETURN							45207
+
+
+//--媒体关闭通知--	
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_CLOSE_NOTIFY						45208
+#define	GMP_SEMH_AUDIO_PLAYER_CMD_MEDIA_CLOSE_NOTIFY_RETURN					45209
+
+
+
+
+
+
+//*************播放前端背景服务器接口指令(50000--59999)*****************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(50000--50999)======================
+//--心跳保活--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_LIFE_HEART						50000
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_LIFE_HEART_RETURN				50001
+
+//--软件更新--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_UPDATE_NOTIFY					50100
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_UPDATE_NOTIFY_RETURN				50101
+
+
+//--日志信息设置--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_LOG							50200
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_LOG_RETURN					50201
+
+//--日志文件获取--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_GET_LOG							50202
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_GET_LOG_RETURN					50203
+
+//--日志文件删除--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_DELETE_LOG						50204
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_DELETE_LOG_RETURN				50205
+
+//--日志列表查询--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_LOG						50206
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_LOG_RETURN					50207
+
+
+//============================配置接口(51000--51999)=====================
+//--获取设备信息--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_GET_DEV_INFO						51000
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_GET_DEV_INFO_RETURN				51001
+
+
+//--设置设备信息--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_DEV_INFO						51002
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_DEV_INFO_RETURN				51003
+
+
+//--启用设备--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_START_DEV						51004
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_START_DEV_RETURN					51005
+
+
+//--停用设备--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_STOP_DEV							51006
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_STOP_DEV_RETURN					51007
+
+
+//--网络配置--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_NETWORK						51200
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_NETWORK_RETURN				51201
+
+
+
+//============================媒体接口(52000--52999)=====================
+//--接收背景图片设置请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_BACKGROUND					52000
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_BACKGROUND_RETURN			52001
+
+
+//--接收字幕设置请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_WORD							52002
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_WORD_RETURN					52003
+
+
+//--查询背景图片信息--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_PICTURE					52004
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_PICTURE_RETURN				52005
+
+
+//--清除背景图片信息--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_CLEAR_PICTURE					52006
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_CLEAR_PICTURE_RETURN				52007
+
+
+//--清除字幕设置--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_CLEAR_WORD						52008
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_CLEAR_WORD_RETURN				52009
+
+
+
+//============================图片处理接口(52100--52199)=====================
+//--处理图片请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_PROCESS_PICTURE					52100
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_PROCESS_PICTURE_RETURN			52101
+
+
+
+//============================动态背景管理接口(52200--52299)=====================
+//--动态背景设置请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_ACTION_BACKGROUND			52200
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_SET_ACTION_BACKGROUND_RETURN		52201
+
+
+//--动态背景更新请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_UPDATE_ACTION_BACKGROUND			52202
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_UPDATE_ACTION_BACKGROUND_RETURN	52203
+
+
+
+//--动态背景查询请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_ACTION_BACKGROUND			52204
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_QUERY_ACTION_BACKGROUND_RETURN	52205
+
+
+
+//--动态背景删除请求--
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_DELETE_ACTION_BACKGROUND			52206
+#define	GMP_SEMH_PLAYER_BACKGROUND_CMD_DELETE_ACTION_BACKGROUND_RETURN	52207
+
+
+
+
+
+
+
+
+
+//*************控制客户端背景服务器接口指令(60000--69999)*****************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(60000--60999)======================
+//--心跳保活--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_LIFE_HEART						60000
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_LIFE_HEART_RETURN				60001
+
+//--软件更新--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_UPDATE_NOTIFY					60100
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_UPDATE_NOTIFY_RETURN				60101
+
+
+//--日志信息设置--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_LOG							60200
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_LOG_RETURN					60201
+
+//--日志文件获取--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_LOG							60202
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_LOG_RETURN					60203
+
+//--日志文件删除--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_DELETE_LOG						60204
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_DELETE_LOG_RETURN				60205
+
+//--日志列表查询--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_QUERY_LOG						60206
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_QUERY_LOG_RETURN					60207
+
+
+//============================配置接口(61000--61999)=====================
+//--获取设备信息--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_DEV_INFO						61000
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_DEV_INFO_RETURN				61001
+
+
+//--设置设备信息--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_DEV_INFO						61002
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_DEV_INFO_RETURN				61003
+
+
+//--启用设备--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_START_DEV						61004
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_START_DEV_RETURN					61005
+
+
+//--停用设备--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_STOP_DEV							61006
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_STOP_DEV_RETURN					61007
+
+
+//--网络配置--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_NETWORK						61200
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_SET_NETWORK_RETURN				61201
+
+
+
+//============================媒体接口(62000--62999)=====================
+//--接收背景图片请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE					62000
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE_RETURN			62001
+
+
+//--媒体客户端背景图片请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CLIENT_PICTURE_REQUEST			62002
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CLIENT_PICTURE_REQUEST_RETURN	62003
+
+
+//--接收背景图片更新请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE_UPDATE			62004
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE_UPDATE_RETURN		62005
+
+
+
+//============================播放前端接收回显接口(62100--62199)=====================
+//--媒体分配通道请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CREATE_CHANNEL						62100
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CREATE_CHANNEL_RETURN				62101
+
+
+//--媒体通道确认请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_ACCEPT_CHANNEL						62102
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_ACCEPT_CHANNEL_RETURN				62103
+
+
+//--媒体释放通道请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_DESTROY_CHANNEL						62104
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_DESTROY_CHANNEL_RETURN				62105
+
+
+//--媒体关闭通道通知--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CLOSE_CHANNEL_NOTIFY					62106
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_CLOSE_CHANNEL_NOTIFY_RETURN			62107
+
+
+//--媒体通道信息查询--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_CHANNEL_INFO						62108
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_GET_CHANNEL_INFO_RETURN				62109
+
+//--接收背景图片请求--
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE_EX					62150
+#define	GMP_SEMH_CLIENT_BACKGROUND_CMD_PLAYER_PICTURE_EX_RETURN				62151
+
+
+
+
+
+
+
+
+//*************PTP服务器接口指令(80000--80999)*****************
+//////////////////////////////////////////////////////////////////////////
+//============================基础接口(80000--80099)======================
+//--心跳保活--
+#define	GMP_PTPEMH_CMD_LIFE_HEART											80000
+#define	GMP_PTPEMH_CMD_LIFE_HEART_RETURN									80001
+
+
+//--状态上报--
+#define	GMP_PTPEMH_CMD_UPLOAD_STATUS										80002
+#define	GMP_PTPEMH_CMD_UPLOAD_STATUS_RETURN									80003
+
+
+
+
+
+
+
+//============================配置接口(80100--80199)=====================
+//--查询设备信息--
+#define	GMP_PTPEMH_CMD_QUERY_DEVICE_INFO									80100
+#define	GMP_PTPEMH_CMD_QUERY_DEVICE_INFO_RETURN								80101
+
+
+//--设置设备信息--
+#define	GMP_PTPEMH_CMD_SET_DEVICE_INFO										80102
+#define	GMP_PTPEMH_CMD_SET_DEVICE_INFO_RETURN								80103
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+

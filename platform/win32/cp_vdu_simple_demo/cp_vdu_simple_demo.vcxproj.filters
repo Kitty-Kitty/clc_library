@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{34ab0829-8145-4883-bf87-cd430963b591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{7c99af7b-7767-4d09-9250-9caa987d3d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{664f8eef-eef7-41e5-8bcb-02b85036da1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files">
+      <UniqueIdentifier>{c9373c96-c458-4124-a6e9-6c3f83586350}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_api.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_pixel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_rect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_status.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_std.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_simple_demo\include\cp_vdu_vector_stream_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_simple_demo\Changes.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu_simple_demo\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\vector_data_unit\vdu_simple_demo\src\files\input_svg_file.svg">
+      <Filter>files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_simple_demo\src\vdu_simple_demo.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

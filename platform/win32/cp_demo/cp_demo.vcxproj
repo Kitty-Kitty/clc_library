@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D06C9F24-936D-4B97-9567-AF896875FB59}</ProjectGuid>
+    <RootNamespace>cp_demo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\demo\;$(SolutionDir)..\..\app\demo\include\;$(SolutionDir)..\..\app\demo\src\;$(SolutionDir)..\..\app\demo\src\codec;$(SolutionDir)..\..\app\demo\src\dev;$(SolutionDir)..\..\app\demo\src\core\;$(SolutionDir)..\..\app\demo\src\extend\;$(SolutionDir)..\..\app\demo\src\filter\;$(SolutionDir)..\..\app\demo\src\func\;$(SolutionDir)..\..\app\demo\src\func\demo\;$(SolutionDir)..\..\app\demo\src\hook\;$(SolutionDir)..\..\app\demo\src\hook\semh\;$(SolutionDir)..\..\app\demo\src\process\;$(SolutionDir)..\..\app\demo\src\session\;$(SolutionDir)..\..\app\demo\src\session\rtp\;$(SolutionDir)..\..\third-party\hi\hi3519\mpp_big-little\include;$(SolutionDir)..\..\third-party\hi\hi3519\mpp_big-little\sample\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\demo\configs\cp_configs.xml" />
+    <Xml Include="..\..\..\app\demo\configs\cp_player.xml" />
+    <Xml Include="..\..\..\app\demo\configs\cp_system.xml" />
+    <Xml Include="..\..\..\app\demo\configs\cp_video.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\demo\configs\cp_log.conf" />
+    <None Include="..\..\..\app\demo\configs\cp_player_log.conf" />
+    <None Include="..\..\..\app\demo\configs\css.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\demo\include\cp_channel_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_conf_string.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_core.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_default.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_heartbeat.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_include.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_info.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_module_include.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_module_type.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_proc.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_socket_data.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_task.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_demo_version.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_media_play.h" />
+    <ClInclude Include="..\..\..\app\demo\include\cp_media_server_info.h" />
+    <ClInclude Include="..\..\..\app\demo\include\css_process_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\cp_demo_codec_module_option.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\hi3519\cp_hi3519_av_codec.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\hi3519\cp_hi3519_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\codec\hi3519\cp_hi3519_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\cp_demo_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\hi3519\cp_hi3519_dev.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\hi3519\cp_hi3519_dev_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\hi3519\cp_hi3519_dev_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\dev\hi3519\cp_hi3519_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\extend\cp_demo_extend_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\cp_demo_filter_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\audio\cp_audio_func.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\audio\cp_audio_func_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\audio\cp_audio_func_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\audio\cp_audio_func_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\audio\cp_audio_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_manager_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_manager_flag.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\cp_demo_func_module_option.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\demo\cp_demo_func.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\demo\cp_demo_func_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\demo\cp_demo_func_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\demo\cp_demo_func_thread.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\video\cp_video_func.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\video\cp_video_func_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\video\cp_video_func_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\video\cp_video_func_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\func\video\cp_video_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_block.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_dependent.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_option.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_register.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_stack.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\cp_demo_hook_type.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_handle.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_printf.h" />
+    <ClInclude Include="..\..\..\app\demo\src\process\cp_demo_process.h" />
+    <ClInclude Include="..\..\..\app\demo\src\process\cp_demo_process_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\process\cp_demo_process_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\process\cp_demo_process_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\process\cp_demo_process_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_manager.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_manager_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_module_list.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\cp_demo_session_module_type.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session_core.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session_info.h" />
+    <ClInclude Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session_printf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_channel_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_heartbeat.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_info.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_module_list.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_proc.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_socket_data.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_demo_task.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_media_codec_info.c" />
+    <ClCompile Include="..\..\..\app\demo\src\app\cp_media_play.c" />
+    <ClCompile Include="..\..\..\app\demo\src\codec\cp_demo_codec.c" />
+    <ClCompile Include="..\..\..\app\demo\src\codec\cp_demo_codec_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\codec\hi3519\cp_hi3519_av_codec.c" />
+    <ClCompile Include="..\..\..\app\demo\src\dev\cp_demo_dev.c" />
+    <ClCompile Include="..\..\..\app\demo\src\dev\cp_demo_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\dev\hi3519\cp_hi3519_dev.c" />
+    <ClCompile Include="..\..\..\app\demo\src\extend\cp_demo_extend.c" />
+    <ClCompile Include="..\..\..\app\demo\src\extend\cp_demo_extend_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\extend\cp_demo_extend_module_list.c" />
+    <ClCompile Include="..\..\..\app\demo\src\filter\cp_demo_filter.c" />
+    <ClCompile Include="..\..\..\app\demo\src\filter\cp_demo_filter_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\filter\cp_demo_filter_module_list.c" />
+    <ClCompile Include="..\..\..\app\demo\src\filter\rtp\cp_rtp_filter.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\audio\cp_audio_func.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\audio\cp_audio_func_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\cp_demo_func_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\demo\cp_demo_func.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\demo\cp_demo_func_thread.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\video\cp_video_func.c" />
+    <ClCompile Include="..\..\..\app\demo\src\func\video\cp_video_func_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\cp_demo_hook.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\cp_demo_hook_dependent.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\cp_demo_hook_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\cp_demo_hook_module_list.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_handle.c" />
+    <ClCompile Include="..\..\..\app\demo\src\hook\rtp\cp_rtp_hook_printf.c" />
+    <ClCompile Include="..\..\..\app\demo\src\main.c" />
+    <ClCompile Include="..\..\..\app\demo\src\process\cp_demo_process.c" />
+    <ClCompile Include="..\..\..\app\demo\src\process\cp_demo_process_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\session\cp_demo_session_manager.c" />
+    <ClCompile Include="..\..\..\app\demo\src\session\cp_demo_session_module_list.c" />
+    <ClCompile Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session.c" />
+    <ClCompile Include="..\..\..\app\demo\src\session\rtp\cp_rtp_session_printf.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\demo\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\codec\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\codec\hi3519\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\dev\hi3519\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\extend\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\filter\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\filter\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\func\audio\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\func\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\func\demo\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\func\video\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\hook\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\hook\rtp\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\process\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\session\CMakeLists.txt" />
+    <Text Include="..\..\..\app\demo\src\session\rtp\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

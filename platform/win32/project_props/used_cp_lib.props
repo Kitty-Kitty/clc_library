@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\lib;$(SolutionDir)$(Configuration)\..\lib;$(SolutionDir)$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cp_lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>Nafxcwd.lib;Libcmtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\include\css_player;$(SolutionDir)..\..\include;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\codec;$(SolutionDir)..\..\src\dev;$(SolutionDir)..\..\src\utils;$(SolutionDir)..\..\src\thread;$(SolutionDir)..\..\src\timer;$(SolutionDir)..\..\src\socket;$(SolutionDir)..\..\src\log;$(SolutionDir)..\..\src\conf;$(SolutionDir)..\..\src\protocol\;$(SolutionDir)..\..\src\protocol\prot_css\;$(SolutionDir)..\..\src\os;$(SolutionDir)..\..\src\module\;$(SolutionDir)..\..\src\pool\;$(SolutionDir)..\..\src\app\;$(SolutionDir)..\..\src\process\;$(SolutionDir)..\..\src\filter\;$(SolutionDir)..\..\src\media\;$(SolutionDir)..\..\src\media\core\;$(SolutionDir)..\..\src\media\description\;$(SolutionDir)..\..\src\media\packet\;$(SolutionDir)..\..\src\media\process\;$(SolutionDir)..\..\src\media\surface\;$(SolutionDir)..\..\src\media\canvas\;$(SolutionDir)..\..\src\func\;$(SolutionDir)..\..\src\extend\;$(SolutionDir)..\..\src\session\;$(SolutionDir)..\..\src\session\css\;$(ProjectDir)..\..\..\..\src\session\css\semh\;$(SolutionDir)..\..\src\hook\;$(SolutionDir)..\..\src\hook\css;$(SolutionDir)..\..\third-party\src\libuv-v1.11.0\include;$(SolutionDir)..\..\third-party\src\libuv-v1.11.0\test;$(SolutionDir)..\..\third-party\src\zlog\windows\zlog\src;$(SolutionDir)..\..\third-party\src\iniparser\src;$(SolutionDir)..\..\third-party\src\gmf_parser\prot_gmp;$(SolutionDir)..\..\third-party\src\liblfds\liblfds7.1.0\liblfds710\inc;$(SolutionDir)..\..\third-party\src\liblfds\liblfds7.1.0\test_and_benchmark\libshared\inc;$(SolutionDir)..\..\third-party\src\jansson-2.9\src;$(SolutionDir)..\..\third-party\src\libxml2-2.9.4\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

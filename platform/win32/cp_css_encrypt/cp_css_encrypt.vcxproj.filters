@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="configs">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{73c82416-3bcb-499e-b750-89985852ac07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev">
+      <UniqueIdentifier>{faa344f7-bb26-40a0-8772-0a55b13e615f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{5db79944-22ae-4be0-bb8c-bad6d973a875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev\hi3531">
+      <UniqueIdentifier>{3a37e023-c853-4394-8e48-56fa026bcf46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev\hi3536">
+      <UniqueIdentifier>{c7f1a1e6-d56f-42ec-b51f-19b6b4069eba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_conf_string.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_default.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_info.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_list.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_module_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_proc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\include\cp_css_encrypt_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_core.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_module_list.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_module_option.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_core.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_info.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_opetion.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_core.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_info.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_opetion.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf_string.h">
+      <Filter>src\dev\hi3531</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf_string.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_cipher.h">
+      <Filter>src\dev\hi3536</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf_string.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\css_encrypt\src\app\CMakeLists.txt">
+      <Filter>src\app</Filter>
+    </Text>
+    <Text Include="..\..\..\app\css_encrypt\src\dev\CMakeLists.txt">
+      <Filter>src\dev</Filter>
+    </Text>
+    <Text Include="..\..\..\app\css_encrypt\src\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="..\..\..\app\css_encrypt\Changes.txt" />
+    <Text Include="..\..\..\app\css_encrypt\CMakeLists.txt" />
+    <Text Include="..\..\..\app\css_encrypt\src\dev\hi3531\CMakeLists.txt">
+      <Filter>src\dev\hi3531</Filter>
+    </Text>
+    <Text Include="..\..\..\app\css_encrypt\src\dev\hi3536\CMakeLists.txt">
+      <Filter>src\dev\hi3536</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_info.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_module_list.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\app\cp_css_encrypt_proc.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev.c">
+      <Filter>src\dev\hi3531</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev.c">
+      <Filter>src\dev\hi3536</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3531\cp_hi3531_dev_conf.c">
+      <Filter>src\dev\hi3531</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_dev_conf.c">
+      <Filter>src\dev\hi3536</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\hi3536\cp_hi3536_cipher.c">
+      <Filter>src\dev\hi3536</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\css_encrypt\src\dev\cp_css_encrypt_dev_manager_conf.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_configs.xml">
+      <Filter>configs</Filter>
+    </Xml>
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_css_encrypt.xml">
+      <Filter>configs</Filter>
+    </Xml>
+    <Xml Include="..\..\..\app\css_encrypt\configs\cp_system.xml">
+      <Filter>configs</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\css_encrypt\configs\cp_log.conf">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="..\..\..\app\css_encrypt\configs\css.conf">
+      <Filter>configs</Filter>
+    </None>
+  </ItemGroup>
+</Project>

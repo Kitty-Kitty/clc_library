@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codec_configure>
+  <!--表示最小缓存数量-->
+  <min_cache_size>10</min_cache_size>
+
+</codec_configure>

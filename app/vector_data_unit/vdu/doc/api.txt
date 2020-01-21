@@ -1,0 +1,59 @@
+/*******************************************************************************
+	* 版权所有: fz & novigo
+	*
+	* 函数名称: cp_vdu_channel_get_roi_pixel
+	*
+	* 函数全名: cp_vdu_channel_get_roi_pixel
+	*
+	* 函数访问: public
+	*
+	* 函数说明: 函数说明
+	*
+	* 参    数: cp_vdu_channel_t * vdu_channel      [in]表示需要处理的通道
+	* 参    数: char * buf						[in/out]参数说明
+	* 参    数: int len						[in/out]参数说明
+	* 参    数: cp_vdu_image_info_t image_info						[in/out]参数说明
+	*
+	* 返 回 值: int
+	*           0  : 成功
+	*         非0  : 失败
+	*
+	* 备    注:其他说明内容
+	*
+	* 作    者：fz
+	* 电子邮箱： fangzhenmu@novigo.com.cn
+	* 创建日期：2018-2-3 10:59:06
+	********************************************************************************/
+	cp_extern int cp_vdu_channel_get_roi_pixel(cp_vdu_channel_t *vdu_channel,
+		char *buf, int len,
+		cp_vdu_image_info_t image_info);
+
+	/*******************************************************************************
+	* 版权所有: fz & novigo
+	*
+	* 函数名称: cp_vdu_channel_get_rect_pixel
+	*
+	* 函数全名: cp_vdu_channel_get_rect_pixel
+	*
+	* 函数访问: public
+	*
+	* 函数说明: 函数说明
+	*
+	* 参    数: cp_vdu_channel_t * vdu_channel      [in]表示需要处理的通道
+	* 参    数: char * buf						[in/out]参数说明
+	* 参    数: int len						[in/out]参数说明
+	* 参    数: cp_vdu_image_info_t image_info						[in/out]参数说明
+	*
+	* 返 回 值: int
+	*           0  : 成功
+	*         非0  : 失败
+	*
+	* 备    注:其他说明内容
+	*
+	* 作    者：fz
+	* 电子邮箱： fangzhenmu@novigo.com.cn
+	* 创建日期：2018-2-3 10:59:09
+	********************************************************************************/
+	cp_extern int cp_vdu_channel_get_rect_pixel(cp_vdu_channel_t *vdu_channel,
+		char *buf, int len,
+		cp_vdu_image_info_t image_info);

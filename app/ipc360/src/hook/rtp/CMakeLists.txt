@@ -1,0 +1,24 @@
+
+
+
+#set src files list
+#add hook source directory
+AUX_SOURCE_DIRECTORY(${CP_IPC_SRC_HOOK_RTP_DIR} CP_IPC_SRC_HOOK_RTP_FILES_LIST)
+
+
+
+#add source file list
+SET(CP_IPC_SRC_HOOK_FILES_LIST 
+	${CP_IPC_SRC_HOOK_FILES_LIST} 
+	${CP_IPC_SRC_HOOK_RTP_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_IPC_INCLUDE_DIR 
+	${CP_IPC_INCLUDE_DIR} 
+	${CP_IPC_SRC_HOOK_RTP_DIR}
+	
+	PARENT_SCOPE
+	)

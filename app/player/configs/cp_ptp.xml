@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ptp_configure>
+  <!--是否使用ptp，0表示不使用；1表示使用-->
+  <use_ptp>1</use_ptp>
+  <!--ptp组播地址，默认：224.0.1.129-->
+  <multicast_address>224.0.1.129</multicast_address>
+  <!--ptp组播端口，默认：320-->
+  <multicast_port>320</multicast_port>
+  <!--是否使用debug模式，0表示不调试；1表示调试-->
+  <used_debug>1</used_debug>
+  <!--ptp debug信息保存位置-->
+  <debug_path>data</debug_path>
+</ptp_configure>

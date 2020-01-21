@@ -1,0 +1,25 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="39" width="45" y="0.5" x="1.5" stroke-width="1.5" stroke="#000" fill="#7B572D"/>
+  <rect id="svg_2" height="39" width="45" y="0.5" x="1.5" stroke-width="1.5" stroke="#000" fill="#7B572D"/>
+  <rect stroke="#000" id="svg_3" height="59.000001" width="122" y="16.5" x="95.5" stroke-width="1.5" fill="#7B572D"/>
+  <rect id="svg_4" height="99" width="119" y="105.5" x="46.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#A98E49"/>
+  <rect id="svg_5" height="87" width="90" y="26.5" x="257.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#A98E49"/>
+  <rect id="svg_6" height="145" width="80" y="106.5" x="188.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#6D97AB"/>
+  <rect id="svg_7" height="66" width="70" y="252.5" x="37.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#6D97AB"/>
+  <rect stroke="#000" id="svg_8" height="99.000003" width="184" y="266.499997" x="138.5" stroke-opacity="null" stroke-width="1.5" fill="#FFAAB8"/>
+  <rect id="svg_9" height="75" width="104" y="149.5" x="316.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#FFAAB8"/>
+  <ellipse ry="33.5" rx="52" id="svg_10" cy="65" cx="449.5" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#A8FFE9"/>
+  <path id="svg_11" d="m400.492547,303.843871l28.28572,-51.499992l75.428581,0l28.285711,51.499992l-28.285711,51.499992l-75.428581,0l-28.28572,-51.499992z" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#6D97AB"/>
+  <path id="svg_12" d="m460.192495,186.398925l18.642864,-44.499997l49.714301,0l18.642859,44.499997l-18.642859,44.499997l-49.714301,0l-18.642864,-44.499997z" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#6D97AB"/>
+ </g>
+</svg>

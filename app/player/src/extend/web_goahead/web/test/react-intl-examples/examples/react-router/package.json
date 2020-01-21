@@ -1,0 +1,22 @@
+{
+  "name": "react-intl-example-react-router",
+  "version": "1.0.0",
+  "description": "React Intl + React Router Example",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-intl": "^2.1.5",
+    "react-router": "^4.0.0-alpha.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Eric Ferraiuolo <edf@ericf.me>",
+  "license": "BSD-3-Clause"
+}

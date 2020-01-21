@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<video>
+  <rtp_configure>
+    <ip>192.168.6.101</ip>
+    <port>8990</port>
+    <ssrc>1234</ssrc>
+  </rtp_configure>
+</video>

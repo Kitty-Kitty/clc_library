@@ -1,0 +1,32 @@
+#set src files list
+#set ecam hook directory
+
+#add ecam HOOK source directory
+AUX_SOURCE_DIRECTORY(${CP_ECAM_SRC_SESSION_DIR} CP_ECAM_SRC_SESSION_FILES_LIST)
+
+
+
+#set func ecam directory
+SET(CP_ECAM_SRC_SESSION_ECAM_DIR ${CP_ECAM_SRC_SESSION_DIR}/rtp)
+
+#add core source directory
+ADD_SUBDIRECTORY(${CP_ECAM_SRC_SESSION_ECAM_DIR})
+
+
+
+#add source file list
+SET(CP_ECAM_EXECUTABLE_FILES_LIST 
+	${CP_ECAM_EXECUTABLE_FILES_LIST} 
+	${CP_ECAM_SRC_SESSION_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+
+#add include dir
+SET(CP_ECAM_INCLUDE_DIR 
+    ${CP_ECAM_INCLUDE_DIR} 
+	${CP_ECAM_SRC_SESSION_DIR}
+
+	PARENT_SCOPE
+	)

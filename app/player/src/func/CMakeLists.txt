@@ -1,0 +1,42 @@
+#set src files list
+#set player func directory
+
+
+#add player func source directory
+AUX_SOURCE_DIRECTORY(${CP_PLAYER_SRC_FUNC_DIR} CP_PLAYER_SRC_FUNC_FILES_LIST)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FUNC_DIR}/audio)
+
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FUNC_DIR}/player)
+
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FUNC_DIR}/ptp)
+
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FUNC_DIR}/video)
+
+
+
+#add source file list
+SET(CP_PLAYER_EXECUTABLE_FILES_LIST 
+	${CP_PLAYER_EXECUTABLE_FILES_LIST} 
+	${CP_PLAYER_SRC_FUNC_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_PLAYER_INCLUDE_DIR ${CP_PLAYER_INCLUDE_DIR} 
+	${CP_PLAYER_SRC_FUNC_DIR}
+
+	PARENT_SCOPE
+	)

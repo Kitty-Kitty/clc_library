@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{59E81584-8269-48B4-AC94-A2A481B7D47D}</ProjectGuid>
+    <RootNamespace>cp_vdu</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\project_props\used_cp_lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\app\vector_data_unit\vdu\;$(SolutionDir)..\..\app\vector_data_unit\vdu\include\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\codec;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\dev;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\core\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\extend\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\filter\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\func\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\func\vdu\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\hook\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\hook\semh\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\process\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\session\;$(SolutionDir)..\..\app\vector_data_unit\vdu\src\session\rtp\;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\Qt-5.9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>cp_lib.lib;Qt5Charts.lib;Qt5Svg.lib;Qt5Widgets.lib;Qt5Core.lib;Qt5Gui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\Qt-5.9.1\lib;$(SolutionDir)$(Configuration)\lib;$(SolutionDir)$(Configuration)\..\lib;$(SolutionDir)$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>::md $(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib
+::copy $(OutputPath)\*  $(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib  /Y
+::copy $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib  /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_std.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_api.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_type.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_vector_stream_type.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_rect.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_pixel.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+copy $(SolutionDir)..\..\app\vector_data_unit\vdu\include\cp_vdu_status.h    $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\include   /Y
+md $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\lib\win32
+copy $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\lib\win32  /Y
+echo "copy third_party[ $(ProjectName) : $(TargetName)$(TargetExt) ] to [ $(SolutionDir)..\..\app\vector_data_unit\vdu_simple_demo\lib\win32 ] successed"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Qt5Chartsd.lib;Qt5Svgd.lib;Qt5Widgetsd.lib;Qt5Cored.lib;Qt5Guid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_channel_manager.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_api.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_app.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_default.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_include.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_log.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_include.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_list.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_module_type.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_option.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_pixel.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_proc.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_process_struct.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_process_struct_proc.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_rect.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_status.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_std.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_task.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_type.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_vector_stream_type.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\include\cp_vdu_version.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_module_list.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_module_option.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec_opetion.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_channel.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_option_function.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_error.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_include.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_printf.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_process.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_unit.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_module_list.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_module_option.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev_opetion.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_flag.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_module_list.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_module_option.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_core.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_info.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\cp_vdu_codec_manager.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\cp_hi3536_av_codec.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_channel.cpp" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_codec_option_function.cpp" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_process.cpp" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\cp_qt_svg_unit.cpp" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_channel_manager.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_media_codec_info.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_api.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_app.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_info.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_module_list.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_proc.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_process_struct_proc.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_status.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\core\cp_vdu_task.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\cp_vdu_dev_manager.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\cp_hi3536_dev.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\cp_vdu_func_manager.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\cp_vdu_func_thread.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\hi3536\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\codec\qt_svg\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\core\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\dev\hi3536\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\func\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu\src\func\vdu\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

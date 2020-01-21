@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0A69E0E5-63A1-4BD7-8FB7-3AB7AC1DDEB4}</ProjectGuid>
+    <RootNamespace>cp_lib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;$(ProjectDir)..\..\..\include;$(ProjectDir)..\..\..\src;$(ProjectDir)..\..\..\src\utils;$(ProjectDir)..\..\..\src\thread;$(ProjectDir)..\..\..\src\timer;$(ProjectDir)..\..\..\src\socket;$(ProjectDir)..\..\..\src\log;$(ProjectDir)..\..\..\src\conf;$(ProjectDir)..\..\..\src\protocol\;$(ProjectDir)..\..\..\src\protocol\prot_css\;$(ProjectDir)..\..\..\src\os;$(ProjectDir)..\..\..\src\module\;$(ProjectDir)..\..\..\src\codec\;$(ProjectDir)..\..\..\src\dev\;$(ProjectDir)..\..\..\src\pool\;$(ProjectDir)..\..\..\src\app\;$(ProjectDir)..\..\..\src\func\;$(ProjectDir)..\..\..\src\media\;$(SolutionDir)..\..\src\media\core\;$(SolutionDir)..\..\src\media\description\;$(SolutionDir)..\..\src\media\packet\;$(SolutionDir)..\..\src\media\process\;$(SolutionDir)..\..\src\media\surface\;$(SolutionDir)..\..\src\media\canvas\;$(ProjectDir)..\..\..\src\filter\;$(ProjectDir)..\..\..\src\process\;$(ProjectDir)..\..\..\src\session\;$(ProjectDir)..\..\..\src\session\css\;$(ProjectDir)..\..\..\src\session\css\semh\;$(ProjectDir)..\..\..\src\hook\;$(ProjectDir)..\..\..\src\hook\css\;$(ProjectDir)..\..\..\src\hook\css\semh\;$(ProjectDir)..\..\..\third-party\src\libuv-v1.11.0\include;$(ProjectDir)..\..\..\third-party\src\libuv-v1.11.0\test;$(ProjectDir)..\..\..\third-party\src\zlog\windows\zlog\src;$(ProjectDir)..\..\..\third-party\src\iniparser\src;$(ProjectDir)..\..\..\third-party\src\gmf_parser\prot_gmp;$(ProjectDir)..\..\..\third-party\src\liblfds\liblfds7.1.0\liblfds710\inc;$(ProjectDir)..\..\..\third-party\src\libxml2-2.9.4\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libuv.lib;ws2_32.lib;psapi.lib;iphlpapi.lib;Userenv.lib;zlog_Debug.lib;iniparser.lib;gmf_parser.lib;liblfds7.1.0.lib;libxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib;$(ProjectDir)..\debug;$(ProjectDir)..\debug\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\gmf_parser\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\iniparser\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\jansson\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\liblfds7.1.0\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\libuv\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\libxml2\lib;$(SolutionDir)..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\zlog\lib</AdditionalLibraryDirectories>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\cp_core.h" />
+    <ClInclude Include="..\..\..\include\cp_default.h" />
+    <ClInclude Include="..\..\..\include\cp_define.h" />
+    <ClInclude Include="..\..\..\include\cp_define_func.h" />
+    <ClInclude Include="..\..\..\include\cp_define_str.h" />
+    <ClInclude Include="..\..\..\include\cp_include.h" />
+    <ClInclude Include="..\..\..\include\cp_status.h" />
+    <ClInclude Include="..\..\..\include\cp_std.h" />
+    <ClInclude Include="..\..\..\include\cp_third_party.h" />
+    <ClInclude Include="..\..\..\include\cp_typedef.h" />
+    <ClInclude Include="..\..\..\include\cp_version.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app_core.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app_entry.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app_function.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app_info.h" />
+    <ClInclude Include="..\..\..\src\app\cp_app_printf.h" />
+    <ClInclude Include="..\..\..\src\app\cp_daemon.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_core.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_info.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_manager.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_manager_info.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_module_list.h" />
+    <ClInclude Include="..\..\..\src\codec\cp_codec_option.h" />
+    <ClInclude Include="..\..\..\src\conf\cp_conf.h" />
+    <ClInclude Include="..\..\..\src\conf\cp_conf_string.h" />
+    <ClInclude Include="..\..\..\src\conf\cp_conf_xml.h" />
+    <ClInclude Include="..\..\..\src\conf\cp_conf_xml_string.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_core.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_description.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_info.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_manager.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_manager_info.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_module_list.h" />
+    <ClInclude Include="..\..\..\src\dev\cp_dev_status.h" />
+    <ClInclude Include="..\..\..\src\extend\cp_extend.h" />
+    <ClInclude Include="..\..\..\src\extend\cp_extend_core.h" />
+    <ClInclude Include="..\..\..\src\extend\cp_extend_info.h" />
+    <ClInclude Include="..\..\..\src\extend\cp_extend_manager.h" />
+    <ClInclude Include="..\..\..\src\extend\cp_extend_manager_info.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_core.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_info.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_manager.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_manager_info.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_module_list.h" />
+    <ClInclude Include="..\..\..\src\filter\cp_filter_status.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_core.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_info.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_manager.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_manager_info.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_module_list.h" />
+    <ClInclude Include="..\..\..\src\func\cp_func_status.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_core.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_handle.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_info.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager_info.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_manager_option.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_module_list.h" />
+    <ClInclude Include="..\..\..\src\hook\cp_hook_typedef.h" />
+    <ClInclude Include="..\..\..\src\log\cp_log.h" />
+    <ClInclude Include="..\..\..\src\log\zlog\cp_zlog.h" />
+    <ClInclude Include="..\..\..\src\media\canvas\cp_media_canvas.h" />
+    <ClInclude Include="..\..\..\src\media\canvas\cp_video_canvas.h" />
+    <ClInclude Include="..\..\..\src\media\core\cp_frame_rect.h" />
+    <ClInclude Include="..\..\..\src\media\core\cp_media_core.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_audio_description.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_codec_pixel_format.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_media_description.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_media_type.h" />
+    <ClInclude Include="..\..\..\src\media\description\cp_video_description.h" />
+    <ClInclude Include="..\..\..\src\media\packet\cp_media_packet.h" />
+    <ClInclude Include="..\..\..\src\media\packet\cp_video_frame_packet.h" />
+    <ClInclude Include="..\..\..\src\media\process\cp_media_process.h" />
+    <ClInclude Include="..\..\..\src\media\process\cp_video_frame_process.h" />
+    <ClInclude Include="..\..\..\src\media\surface\cp_media_surface.h" />
+    <ClInclude Include="..\..\..\src\media\surface\cp_video_surface.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_core.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_dependent.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_function.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_info.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_message.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_option.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_option_function.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_printf.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_register_function.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_status.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_type.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_manager.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_function.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_info.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_register.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_manager_type.h" />
+    <ClInclude Include="..\..\..\src\module\cp_module_register.h" />
+    <ClInclude Include="..\..\..\src\os\cp_env.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_core.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_function.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_info.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_manager.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_manager_info.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_module_list.h" />
+    <ClInclude Include="..\..\..\src\pool\cp_pool_option.h" />
+    <ClInclude Include="..\..\..\src\pool\memory\cp_mem_pool.h" />
+    <ClInclude Include="..\..\..\src\pool\memory\cp_mem_pool_info.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process_core.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process_info.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process_manager.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process_manager_info.h" />
+    <ClInclude Include="..\..\..\src\process\cp_process_module_list.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_core.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_network.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_type.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_core.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_device_info.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_device_type.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_log_info.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_media_info.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_semh_command.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_status.h" />
+    <ClInclude Include="..\..\..\src\protocol\prot_css\css_update_info.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_core.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_info.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_manager.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_manager_info.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_option.h" />
+    <ClInclude Include="..\..\..\src\session\cp_session_typedef.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_inet.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_core.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_flag.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_info.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_manager.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_manager_info.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_module_list.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_option.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_status.h" />
+    <ClInclude Include="..\..\..\src\socket\cp_socket_type.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_core.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_info.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager_info.h" />
+    <ClInclude Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_printf.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_barrier.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_mutex.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_mutex_core.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_rwlock.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_sem.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_core.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_info.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_manager.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_manager_info.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_module_list.h" />
+    <ClInclude Include="..\..\..\src\thread\cp_thread_option.h" />
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread.h" />
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_core.h" />
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_info.h" />
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager.h" />
+    <ClInclude Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager_info.h" />
+    <ClInclude Include="..\..\..\src\timer\cp_timer.h" />
+    <ClInclude Include="..\..\..\src\timer\cp_timer_core.h" />
+    <ClInclude Include="..\..\..\src\timer\cp_timer_manager.h" />
+    <ClInclude Include="..\..\..\src\timer\cp_timer_manager_info.h" />
+    <ClInclude Include="..\..\..\src\timer\cp_timer_module_list.h" />
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer.h" />
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_core.h" />
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_info.h" />
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager.h" />
+    <ClInclude Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager_info.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_alloc.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_array.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_array_pool.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_atomic.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_bit.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_buf.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_chain.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_file_system.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_gettimeofday.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_lockfree_queue.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_list.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_math.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_min_heap.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_mpalloc.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_queue.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_rbtree.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_safe_queue.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_string.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_time.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_tree_ex.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_utils.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_uuid.h" />
+    <ClInclude Include="..\..\..\src\utils\cp_kfifo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\app\cp_app.c" />
+    <ClCompile Include="..\..\..\src\app\cp_app_function.c" />
+    <ClCompile Include="..\..\..\src\app\cp_daemon.c" />
+    <ClCompile Include="..\..\..\src\codec\cp_codec.c" />
+    <ClCompile Include="..\..\..\src\codec\cp_codec_manager.c" />
+    <ClCompile Include="..\..\..\src\codec\cp_codec_module_list.c" />
+    <ClCompile Include="..\..\..\src\conf\cp_conf.c" />
+    <ClCompile Include="..\..\..\src\conf\cp_conf_xml.c" />
+    <ClCompile Include="..\..\..\src\core\cp_status.c" />
+    <ClCompile Include="..\..\..\src\core\cp_version.c" />
+    <ClCompile Include="..\..\..\src\dev\cp_dev.c" />
+    <ClCompile Include="..\..\..\src\dev\cp_dev_description.c" />
+    <ClCompile Include="..\..\..\src\dev\cp_dev_manager.c" />
+    <ClCompile Include="..\..\..\src\dev\cp_dev_module_list.c" />
+    <ClCompile Include="..\..\..\src\extend\cp_extend.c" />
+    <ClCompile Include="..\..\..\src\extend\cp_extend_manager.c" />
+    <ClCompile Include="..\..\..\src\filter\cp_filter.c" />
+    <ClCompile Include="..\..\..\src\filter\cp_filter_manager.c" />
+    <ClCompile Include="..\..\..\src\filter\cp_filter_module_list.c" />
+    <ClCompile Include="..\..\..\src\func\cp_func.c" />
+    <ClCompile Include="..\..\..\src\func\cp_func_manager.c" />
+    <ClCompile Include="..\..\..\src\func\cp_func_module_list.c" />
+    <ClCompile Include="..\..\..\src\hook\cp_hook.c" />
+    <ClCompile Include="..\..\..\src\hook\cp_hook_manager.c" />
+    <ClCompile Include="..\..\..\src\hook\cp_hook_module_list.c" />
+    <ClCompile Include="..\..\..\src\log\cp_log.c" />
+    <ClCompile Include="..\..\..\src\log\zlog\cp_zlog.c" />
+    <ClCompile Include="..\..\..\src\media\canvas\cp_media_canvas.c" />
+    <ClCompile Include="..\..\..\src\media\canvas\cp_video_canvas.c" />
+    <ClCompile Include="..\..\..\src\media\core\cp_frame_rect.c" />
+    <ClCompile Include="..\..\..\src\media\description\cp_audio_description.c" />
+    <ClCompile Include="..\..\..\src\media\description\cp_media_description.c" />
+    <ClCompile Include="..\..\..\src\media\description\cp_video_description.c" />
+    <ClCompile Include="..\..\..\src\media\packet\cp_media_packet.c" />
+    <ClCompile Include="..\..\..\src\media\packet\cp_video_frame_packet.c" />
+    <ClCompile Include="..\..\..\src\media\process\cp_media_process.c" />
+    <ClCompile Include="..\..\..\src\media\process\cp_video_frame_process.c" />
+    <ClCompile Include="..\..\..\src\media\surface\cp_media_surface.c" />
+    <ClCompile Include="..\..\..\src\media\surface\cp_video_surface.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_dependent.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_function.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_manager.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_manager_function.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_message.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_option_function.c" />
+    <ClCompile Include="..\..\..\src\module\cp_module_register_function.c" />
+    <ClCompile Include="..\..\..\src\os\cp_env.c" />
+    <ClCompile Include="..\..\..\src\pool\cp_pool.c" />
+    <ClCompile Include="..\..\..\src\pool\cp_pool_function.c" />
+    <ClCompile Include="..\..\..\src\pool\cp_pool_manager.c" />
+    <ClCompile Include="..\..\..\src\pool\cp_pool_module_list.c" />
+    <ClCompile Include="..\..\..\src\pool\memory\cp_mem_pool.c" />
+    <ClCompile Include="..\..\..\src\process\cp_process.c" />
+    <ClCompile Include="..\..\..\src\process\cp_process_manager.c" />
+    <ClCompile Include="..\..\..\src\process\cp_process_module_list.c" />
+    <ClCompile Include="..\..\..\src\session\cp_session.c" />
+    <ClCompile Include="..\..\..\src\session\cp_session_manager.c" />
+    <ClCompile Include="..\..\..\src\socket\cp_inet.c" />
+    <ClCompile Include="..\..\..\src\socket\cp_socket.c" />
+    <ClCompile Include="..\..\..\src\socket\cp_socket_manager.c" />
+    <ClCompile Include="..\..\..\src\socket\cp_socket_module_list.c" />
+    <ClCompile Include="..\..\..\src\socket\libuv_socket\cp_uv_socket.c" />
+    <ClCompile Include="..\..\..\src\socket\libuv_socket\cp_uv_socket_manager.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_barrier.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_mutex.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_rwlock.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_sem.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_thread.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_thread_manager.c" />
+    <ClCompile Include="..\..\..\src\thread\cp_thread_module_list.c" />
+    <ClCompile Include="..\..\..\src\thread\libuv_thread\cp_uv_thread.c" />
+    <ClCompile Include="..\..\..\src\thread\libuv_thread\cp_uv_thread_manager.c" />
+    <ClCompile Include="..\..\..\src\timer\cp_timer.c">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\timer\cp_timer_info.h" />
+    <ClCompile Include="..\..\..\src\timer\cp_timer_manager.c" />
+    <ClCompile Include="..\..\..\src\timer\cp_timer_module_list.c" />
+    <ClCompile Include="..\..\..\src\timer\libuv_timer\cp_uv_timer.c" />
+    <ClCompile Include="..\..\..\src\timer\libuv_timer\cp_uv_timer_manager.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_alloc.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_array.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_array_pool.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_atomic.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_buf.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_chain.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_file_system.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_gettimeofday.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_lockfree_queue.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_list.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_math.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_mpalloc.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_queue.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_rbtree.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_safe_queue.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_string.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_time.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_utils.c" />
+    <ClCompile Include="..\..\..\src\utils\cp_uuid.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Changes.txt" />
+    <Text Include="..\..\..\src\app\CMakeLists.txt" />
+    <Text Include="..\..\..\src\CMakeLists.txt" />
+    <Text Include="..\..\..\src\codec\CMakeLists.txt" />
+    <Text Include="..\..\..\src\conf\CMakeLists.txt" />
+    <Text Include="..\..\..\src\core\CMakeLists.txt" />
+    <Text Include="..\..\..\src\dev\CMakeLists.txt" />
+    <Text Include="..\..\..\src\extend\CMakeLists.txt" />
+    <Text Include="..\..\..\src\filter\CMakeLists.txt" />
+    <Text Include="..\..\..\src\func\CMakeLists.txt" />
+    <Text Include="..\..\..\src\hook\CMakeLists.txt" />
+    <Text Include="..\..\..\src\log\CMakeLists.txt" />
+    <Text Include="..\..\..\src\log\zlog\CMakeLists.txt" />
+    <Text Include="..\..\..\src\media\CMakeLists.txt" />
+    <Text Include="..\..\..\src\module\CMakeLists.txt" />
+    <Text Include="..\..\..\src\os\CMakeLists.txt" />
+    <Text Include="..\..\..\src\pool\CMakeLists.txt" />
+    <Text Include="..\..\..\src\pool\memory\CMakeLists.txt" />
+    <Text Include="..\..\..\src\process\CMakeLists.txt" />
+    <Text Include="..\..\..\src\protocol\CMakeLists.txt" />
+    <Text Include="..\..\..\src\protocol\prot_css\CMakeLists.txt" />
+    <Text Include="..\..\..\src\session\CMakeLists.txt" />
+    <Text Include="..\..\..\src\socket\CMakeLists.txt" />
+    <Text Include="..\..\..\src\socket\libuv_socket\CMakeLists.txt" />
+    <Text Include="..\..\..\src\thread\CMakeLists.txt" />
+    <Text Include="..\..\..\src\thread\libuv_thread\CMakeLists.txt" />
+    <Text Include="..\..\..\src\timer\CMakeLists.txt" />
+    <Text Include="..\..\..\src\timer\libuv_timer\CMakeLists.txt" />
+    <Text Include="..\..\..\src\utils\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

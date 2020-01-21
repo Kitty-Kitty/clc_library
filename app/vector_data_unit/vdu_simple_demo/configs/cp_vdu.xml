@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<general>
+  <!--表示类型，取值：video（视频）；audio（音频）-->
+  <type>video</type>
+  <!--控制器的名称-->
+  <name>控制器</name>
+  <!--表示序列号-->
+  <sn>123456789</sn>
+ 
+  <!--定义处理相关的配-->
+  <func_configure>
+    <!--表示处理的线程数量，该值暂时不可用-->
+    <thread_number>3</thread_number>
+    <!--表示线程空闲时休眠的时间，支持的单位：ns(纳秒)/ms(微秒)/s（秒）/m（分）/h（小）/d（天）-->
+    <thread_interval>10ms</thread_interval>
+  </func_configure>
+  
+  
+</general>

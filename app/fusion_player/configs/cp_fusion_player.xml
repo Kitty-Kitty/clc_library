@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<general>
+  <!--表示播放器类型，取值：video（视频）；audio（音频）-->
+  <type>video</type>
+  <!--控制器的名称-->
+  <name>视频播放器</name>
+  <!--表示序列号-->
+  <sn>123456789</sn>
+  <!--表示心跳间隔-->
+  <heartbeat_interval>10s</heartbeat_interval>
+
+  <!--最大心跳丢失次数-->
+  <heartbeat_lost_times>3</heartbeat_lost_times>
+  
+  <!--硬件配置信息-->
+  <hardware>
+    <!--分辨率信息-->
+    <resolution>
+      <!--分辨率宽度-->
+      <width>1366</width>
+      <!--分辨率高度-->
+      <height>768</height>
+    </resolution>
+    <!--亮度-->
+    <luminance>100</luminance>
+    <!--对比度-->
+    <contrast>50</contrast>
+    <!--背景颜色-->
+    <background_color>FFFFFF</background_color>
+    <!--色温-->
+    <color_temp>50</color_temp>
+    <!---->
+    <cctv_siz>50</cctv_siz>
+  </hardware>
+  
+  <!--使用限制-->
+  <limit>
+    <!--硬盘限制-->
+    <disk>100</disk>
+    <!--内存限制-->
+    <memory>100</memory>
+    <!--cpu限制-->
+    <cpu>100</cpu>
+    <!--网络使用限制-->
+    <network>100</network>
+    <!--播放限制-->
+    <play_count>128</play_count>
+  </limit>
+
+  <!--串口信息定义-->
+  <serial>
+    <!--串口设备名称-->
+    <device>ttyAMA0</device>
+    <!--串口波特率-->
+    <baud_rate>115200</baud_rate>
+    <!--串口数据位-->
+    <character_size>8</character_size>
+    <!--串口流控制-->
+    <flow_control>none</flow_control>
+    <!--串口奇偶校验-->
+    <parity>none</parity>
+    <!--串口停止位-->
+    <stop_bits>1</stop_bits>
+  </serial>
+
+  <!--定义处理相关的配-->
+  <func_configure>
+    <!--表示处理的线程数量，该值暂时不可用-->
+    <thread_number>3</thread_number>
+    <!--表示线程空闲时休眠的时间，支持的单位：ns(纳秒)/ms(微秒)/s（秒）/m（分）/h（小）/d（天）-->
+    <thread_interval>10ms</thread_interval>
+  </func_configure>
+  
+  <!--表示须要进行音频处理-->
+  <audio_configure>
+    <!--表示是否进行音频重采样，取值：0表示不重采；1表示重采-->
+    <convert_flag>1</convert_flag>
+    
+    <!--表示输了出声道数，取值：1表示单声道(mono)；2表示STEREO立体声-->
+    <channel_layout>2</channel_layout>
+    
+    <!--表示声音采样类型，取值：1表示8位；2表示16位；3表示32位-->
+    <sample_format>2</sample_format>
+  
+    <!--表示声音采样频率，取值：44100/48000等-->
+    <sample_rate>44100</sample_rate>
+
+     <!--表示声音的采样值-->
+    <samples>1024</samples>
+    
+    <!--表示音频缓存大小，取值：<=0表示不设置；>0表示设置的值；-->
+    <buffer_size>1024</buffer_size>
+
+    <!--表示每个音频缓存大小，取值：<=0表示不设置；>0表示设置的值；-->
+    <each_buffer_length>10240</each_buffer_length>
+
+    <!--表示音频播放延时时间，支持的单位：ns(纳秒)/ms(微秒)/s（秒）/m（分）/h（小）/d（天）-->
+    <play_delay>200ms</play_delay>
+
+    <!--表示音频播放延时样本数量，大于该数值时将进行双倍播放-->
+    <play_delay_sample_number>20</play_delay_sample_number>
+  </audio_configure>
+  
+</general>

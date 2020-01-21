@@ -1,0 +1,30 @@
+#set src files list
+#set vdu_demo hook directory
+
+#add vdu_demo HOOK source directory
+AUX_SOURCE_DIRECTORY(${CP_VDU_DEMO_SRC_SESSION_DIR} CP_VDU_DEMO_SRC_SESSION_FILES_LIST)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_VDU_DEMO_SRC_SESSION_DIR}/rtp)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_VDU_DEMO_SRC_SESSION_DIR}/memh)
+
+
+#add source file list
+SET(CP_VDU_DEMO_EXECUTABLE_FILES_LIST 
+	${CP_VDU_DEMO_EXECUTABLE_FILES_LIST} 
+	${CP_VDU_DEMO_SRC_SESSION_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_VDU_DEMO_INCLUDE_DIR 
+    ${CP_VDU_DEMO_INCLUDE_DIR} 
+	${CP_VDU_DEMO_SRC_SESSION_DIR}
+
+	PARENT_SCOPE
+	)

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hi3531_hdmi>
+  <!--模块设备号,取值[0]-->
+  <dev_id>0</dev_id>
+
+  <!--是否强制HDMI输出,取值[0, 1]；0:表示不用HDMI，使用DVI；1:表示用HDMI-->
+  <enable_hdmi>0</enable_hdmi>
+
+  <!--是否输出视频,取值[0, 1]；0:表示不用使能；1:表示使能-->
+  <enable_video>1</enable_video>
+
+  <!--HDMI输出视频模式,取值[1, 2, 3]；1:表示VIDEO_MODE_YCBCR444; 2:表示VIDEO_MODE_YCBCR422; 3:表示VIDEO_MODE_RGB444-->
+  <video_out_mode>1</video_out_mode>
+
+  <!--是否使能xvYCC输出模式,取值[0, 1]；0:表示不用使能；1:表示使能-->
+  <enable_xvycc_mode>0</enable_xvycc_mode>
+
+  <!--是否使能音频,取值[0, 1]；0:表示不用使能；1:表示使能-->
+  <enable_audio>0</enable_audio>
+
+  <!--多声道还是立体声,取值[0, 1]；0:表示立体声；1:表示多声道,固定为8 声道-->
+  <enable_multi_channel>0</enable_multi_channel>
+
+</hi3531_hdmi>

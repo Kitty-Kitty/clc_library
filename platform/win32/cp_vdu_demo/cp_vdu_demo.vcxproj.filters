@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="configs">
+      <UniqueIdentifier>{affeaca3-ae68-4214-8db7-f3e1a1c5e589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{87fc6b72-e6de-419a-b0a7-b0e64c414df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{7b618916-4b27-472d-9af7-0fb41910b0d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{c8ab5978-7bb3-4017-b989-bfed2778a6b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec">
+      <UniqueIdentifier>{e25351a3-8a7f-4435-9291-213f8e7acda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dev">
+      <UniqueIdentifier>{6614429a-9a10-469a-856a-cc735d5ec302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extend">
+      <UniqueIdentifier>{905f0c87-b8bb-44bc-86a2-6ca93dd23688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filter">
+      <UniqueIdentifier>{765d924d-f733-4c73-9082-6fb9dba2ddda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\func">
+      <UniqueIdentifier>{783f15d1-6fae-499e-a356-1bb854952114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hook">
+      <UniqueIdentifier>{093ad0e9-d529-44bd-9d87-396a20b121bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\process">
+      <UniqueIdentifier>{21d040d5-879c-43ee-9659-26c0c237ef4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\session">
+      <UniqueIdentifier>{230e4d71-a4e8-4f4a-9276-6979c038a5ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filter\rtp">
+      <UniqueIdentifier>{5703508a-6ec3-4669-9573-c999334b7dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\session\rtp">
+      <UniqueIdentifier>{88a2e4db-01a0-4cf8-82d5-4de9099d9d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hook\rtp">
+      <UniqueIdentifier>{0bb34248-267d-477e-8fa6-74a4ab9b9417}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\func\vdu_demo">
+      <UniqueIdentifier>{2dd0dc31-a7fb-4c01-adb6-72d2ce9b45c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec\cp_vdu">
+      <UniqueIdentifier>{abba405f-a7ac-4e33-9efc-5ba2e28920ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_configs.xml">
+      <Filter>configs</Filter>
+    </Xml>
+    <Xml Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_player.xml">
+      <Filter>configs</Filter>
+    </Xml>
+    <Xml Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_system.xml">
+      <Filter>configs</Filter>
+    </Xml>
+    <Xml Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_video.xml">
+      <Filter>configs</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_log.conf">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="..\..\..\app\vector_data_unit\vdu_demo\configs\cp_player_log.conf">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="..\..\..\app\vector_data_unit\vdu_demo\configs\css.conf">
+      <Filter>configs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_channel_manager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_conf_string.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_default.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_heartbeat.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_info.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_module_include.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_module_list.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_module_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_proc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_socket_data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_media_play.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_media_server_info.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\css_process_core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_core.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_manager.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_manager_info.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_module_list.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_module_option.h">
+      <Filter>src\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_core.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_manager.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_manager_info.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_module_list.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_module_option.h">
+      <Filter>src\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_core.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_info.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_manager.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_manager_info.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_module_list.h">
+      <Filter>src\extend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_core.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_info.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_manager.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_manager_info.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_module_list.h">
+      <Filter>src\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_manager.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_manager_core.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_manager_flag.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_manager_info.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_module_list.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_module_option.h">
+      <Filter>src\func</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process_core.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process_info.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process_manager.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process_manager_info.h">
+      <Filter>src\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter.h">
+      <Filter>src\filter\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter_core.h">
+      <Filter>src\filter\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter_info.h">
+      <Filter>src\filter\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter_manager.h">
+      <Filter>src\filter\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter_manager_info.h">
+      <Filter>src\filter\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session.h">
+      <Filter>src\session\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session_core.h">
+      <Filter>src\session\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session_info.h">
+      <Filter>src\session\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session_printf.h">
+      <Filter>src\session\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook.h">
+      <Filter>src\hook\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_core.h">
+      <Filter>src\hook\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_handle.h">
+      <Filter>src\hook\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_info.h">
+      <Filter>src\hook\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_printf.h">
+      <Filter>src\hook\rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_block.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_core.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_dependent.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_info.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_manager.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_manager_info.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_module_list.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_option.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_register.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_stack.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_type.h">
+      <Filter>src\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_core.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_info.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_manager.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_manager_info.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_module_list.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_module_type.h">
+      <Filter>src\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func.h">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func_core.h">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func_info.h">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func_thread.h">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\include\cp_vdu_demo.h" />
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_codec.h">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_codec_core.h">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_codec_info.h">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_codec_opetion.h">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_lib.h">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_channel_manager.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_heartbeat.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_info.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_module_list.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_proc.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_socket_data.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo_task.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_media_codec_info.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_media_play.c">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu_demo_codec_manager.c">
+      <Filter>src\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\cp_vdu_demo_dev_manager.c">
+      <Filter>src\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend.c">
+      <Filter>src\extend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_manager.c">
+      <Filter>src\extend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\cp_vdu_demo_extend_module_list.c">
+      <Filter>src\extend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_manager.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\cp_vdu_demo_filter_module_list.c">
+      <Filter>src\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\cp_vdu_demo_func_manager.c">
+      <Filter>src\func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process.c">
+      <Filter>src\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\cp_vdu_demo_process_manager.c">
+      <Filter>src\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\cp_rtp_filter.c">
+      <Filter>src\filter\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session.c">
+      <Filter>src\session\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\cp_rtp_session_printf.c">
+      <Filter>src\session\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook.c">
+      <Filter>src\hook\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_handle.c">
+      <Filter>src\hook\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\cp_rtp_hook_printf.c">
+      <Filter>src\hook\rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_dependent.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_manager.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\cp_vdu_demo_hook_module_list.c">
+      <Filter>src\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_manager.c">
+      <Filter>src\session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\cp_vdu_demo_session_module_list.c">
+      <Filter>src\session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func.c">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\cp_vdu_demo_func_thread.c">
+      <Filter>src\func\vdu_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\cp_vdu_demo.c" />
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_codec.c">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\cp_vdu_lib.c">
+      <Filter>src\codec\cp_vdu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\app\CMakeLists.txt">
+      <Filter>src\app</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\CMakeLists.txt">
+      <Filter>src\codec</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\dev\CMakeLists.txt">
+      <Filter>src\dev</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\extend\CMakeLists.txt">
+      <Filter>src\extend</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\CMakeLists.txt">
+      <Filter>src\filter</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\CMakeLists.txt">
+      <Filter>src\func</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\process\CMakeLists.txt">
+      <Filter>src\process</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\filter\rtp\CMakeLists.txt">
+      <Filter>src\filter\rtp</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\rtp\CMakeLists.txt">
+      <Filter>src\session\rtp</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\rtp\CMakeLists.txt">
+      <Filter>src\hook\rtp</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\hook\CMakeLists.txt">
+      <Filter>src\hook</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\session\CMakeLists.txt">
+      <Filter>src\session</Filter>
+    </Text>
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\func\vdu_demo\CMakeLists.txt" />
+    <Text Include="..\..\..\app\vector_data_unit\vdu_demo\src\codec\cp_vdu\CMakeLists.txt">
+      <Filter>src\codec\cp_vdu</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

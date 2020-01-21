@@ -1,0 +1,25 @@
+
+
+
+
+
+            ................................................
+            .                    margin                    .
+            .                                              .
+            .       _____________border_____________       .
+            .      |xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|      .
+            .      |xxxxxxxxxxx  padding  xxxxxxxxxx|      .
+            .      |xxxxxxx__________________xxxxxxx|      .
+            .      |xxxxxx|                  |xxxxxx|      .
+            .      |xxxxxx|                  |xxxxxx|      .
+            .      |xxxxxx|      content     |xxxxxx|      .
+            .      |xxxxxx|                  |xxxxxx|      .
+            .      |xxxxxx|__________________|xxxxxx|      .
+            .      |xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|      .
+            .      |xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|      .
+            .      |________________________________|      .
+            .                                              .
+            .                                              .
+            ................................................
+
+

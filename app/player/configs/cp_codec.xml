@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codec_configure>
+  <!--表示编码器输出视频宽度-->
+  <width>1600</width>
+  <!--表示编码器输出视频高度-->
+  <heigth>800</heigth>
+  <!--表示编码帧率，(0, 60]为正常值；其他不限制-->
+  <fps>25</fps>
+  <!--表示编码器输出码率，单位kbps-->
+  <bitrate>2000</bitrate>
+  <!--表示codec工作模式，
+      1表示vi-venc；
+      2表示vi-stitch_vpss-venc模式; 
+      3表示vi-fisheye-stitch_vpss-venc模式;
+      4表示vi-fisheye-process_vpss-venc;
+      5表示vi-fisheye-process_vpss-stitch_vpss-venc;
+      6表示vi-process_vpss-fisheye-stitch_vpss-venc-->
+  <mode>5</mode>
+  <!--当codec工作模式为vi-venc时，使用的vi channel编号。取值为当前正在工作的vi channel：[0, 4]-->
+  <venc_channel>0</venc_channel>
+
+</codec_configure>

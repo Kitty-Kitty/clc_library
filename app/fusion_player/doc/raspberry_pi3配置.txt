@@ -1,0 +1,67 @@
+
+1、配置网卡
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+5.153.225.207   mirrordirector.raspbian.org
+46.235.227.11   archive.raspberrypi.org
+202.141.160.110 mirrors.ustc.edu.cn
+210.32.158.231  mirrors.zju.edu.cn
+127.0.1.1       raspberrypi
+
+
+
+
+
+2、修改网卡
+sudo cat /etc/network/interfaces
+
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+# iface eth0 inet manual
+auto eth0
+iface eth0 inet static
+address 192.168.1.82
+netmask 255.255.255.0
+broadcast 192.168.1.255
+gateway 192.168.1.254
+dns-nameservers 8.8.8.8 8.8.4.4 114.114.114.114 61.139.2.69
+dns-search feelnet.org
+
+
+#allow-hotplug wlan0
+#iface wlan0 inet manual
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+auto wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+
+
+
+#allow-hotplug wlan1
+#iface wlan1 inet manual
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+
+3、安装工具软件
+升级Raspberry Pi系统的软件
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install alsa-utils
+sudo apt-get install subversion
+sudo apt-get install cmake

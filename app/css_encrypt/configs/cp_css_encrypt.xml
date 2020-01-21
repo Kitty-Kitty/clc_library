@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<general>
+  <!--表示加密类型，取值：hi3531；hi3536-->
+  <type>hi3536</type>
+  <!--程序的名称-->
+  <name>加密程序</name>
+  <!--表示序列号-->
+  <sn>123456789</sn>
+  
+  <!--加密数据配置信息-->
+  <encrypt_data_configure>
+    <!--需要被加密的文件-->
+    <source_file>E:\project_work\project\css_workspace\cp_player\source.txt</source_file>
+
+    <!--加密后保存的文件-->
+    <destination_file>E:\project_work\project\css_workspace\cp_player\destination.txt</destination_file>
+  </encrypt_data_configure>
+
+  <!--hi3531加密程序配置-->
+  <hi3531_encrypt_configure>
+    <!--表示加密的密钥-->
+    <key>004B8A3546DA3EB0AFDC101BE21FA1ACC054E8C9BAB87E17253E7AC602BCC055</key>
+  </hi3531_encrypt_configure>
+
+  <!--hi3536加密程序配置-->
+  <hi3536_encrypt_configure>
+    <!--表示加密的密钥-->
+    <key>004B8A3546DA3EB0AFDC101BE21FA1ACC054E8C9BAB87E17253E7AC602BCC055</key>
+
+    <!--表示初始向量-->
+    <iv>004B8A3546DA3EB0AFDC101BE21FA1ACC054E8C9BAB87E17253E7AC602BCC055</iv>
+
+    <!--表示加密算法,取值[0, 2];
+          0:表示DES 算法;
+          1:表示3DES 算法;
+          2:表示AES 算法;
+    -->
+    <alg>0</alg>
+
+    <!--表示加密或解密的位宽,取值[0, 3];
+          0:表示64bit 位宽;
+          1:表示8bit 位宽;
+          2:表示1bit 位宽;
+          3:表示128bit 位宽
+    -->
+    <bit_width>8</bit_width>
+
+    <!--表示工作模式,取值[0, 5];
+          0:表示ECB（Electronic CodeBook）模式;
+          1:表示CBC（Cipher Block Chaining）模式;
+          2:表示CFB（Cipher FeedBack）模式;
+          3:表示OFB（Output FeedBack）模式;
+          4:表示CTR（Counter）模式;
+          5:表示CBC-CTS 模式;
+    -->
+    <work_mode>0</work_mode>
+
+    <!--表示密钥长度,取值[0, 4]; 
+          0:表示AES 运算方式下采用128bit 密钥长度;
+          1:表示AES 运算方式下采用192bit 密钥长度;
+          2:表示AES 运算方式下采用256bit 密钥长度;
+          3:表示3DES 运算方式下采用3 个key;
+          4:表示3DES 运算方式下采用2 个key;
+    -->
+    <key_length>0</key_length>
+
+    <!--表示向量变更,取值[0, 1]; 
+          0:表示向量不变更;
+          1:表示向量变更;
+    -->
+    <change_flag_iv>0</change_flag_iv>
+  </hi3536_encrypt_configure>
+</general>

@@ -1,0 +1,29 @@
+#set src files list
+#set session directory
+SET(CP_VDU_SRC_CODEC_QT_SVG_DIR ${CP_VDU_SRC_CODEC_DIR}/qt_svg)
+
+
+
+
+#add session source directory
+AUX_SOURCE_DIRECTORY(${CP_VDU_SRC_CODEC_QT_SVG_DIR} CP_VDU_SRC_CODEC_QT_SVG_FILES_LIST)
+
+
+
+
+#add source file list
+SET(CP_VDU_SRC_CODEC_VDU_FILES_LIST 
+	${CP_VDU_SRC_CODEC_VDU_FILES_LIST} 
+	${CP_VDU_SRC_CODEC_QT_SVG_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+
+#add include dir
+SET(CP_VDU_INCLUDE_DIR
+    ${CP_VDU_INCLUDE_DIR} 
+    ${CP_VDU_SRC_CODEC_QT_SVG_DIR}
+	
+	PARENT_SCOPE
+	)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hi3531_configure>
+
+  <!--hi3531系统配置信息-->
+  <hi3531_system>
+    <!--表示最大的内存池数量-->
+    <max_pool_count>128</max_pool_count>
+
+    <!--表示对齐宽度-->
+    <align_width>64</align_width>
+  </hi3531_system>
+
+</hi3531_configure>

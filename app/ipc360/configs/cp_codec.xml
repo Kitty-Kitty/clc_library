@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codec_configure>
+  <!--表示编码器输出视频宽度-->
+  <width>1600</width>
+  <!--表示编码器输出视频高度-->
+  <heigth>800</heigth>
+  <!--表示编码帧率，(0, 60]为正常值；其他不限制-->
+  <fps>25</fps>
+  <!--表示编码器输出码率，单位kbps-->
+  <bitrate>2000</bitrate>
+  <!--表示codec工作模式，
+      1表示vi-venc；
+      2表示vi-stitch_vpss-venc模式; 
+      3表示vi-fisheye-stitch_vpss-venc模式;
+      4表示vi-fisheye-process_vpss-venc;
+      5表示vi-fisheye-process_vpss-stitch_vpss-venc;
+      6表示vi-process_vpss-fisheye-stitch_vpss-venc-->
+  <mode>5</mode>
+  <!--当codec工作模式为vi-venc时，使用的vi channel编号。取值为当前正在工作的vi channel：[0, 4]-->
+  <venc_channel>0</venc_channel>
+
+  <!--stitch配置项-->
+  <stitch_configure>
+    <!--拼接后图像的宽度。要求4 对齐，取值范围：[64, 8188]-->
+    <out_width>5084</out_width>
+
+    <!--拼接后图像的高度。要求4 对齐，取值范围：[64, 4608]-->
+    <out_height>1520</out_height>
+
+    <!--表示不用overlap_point配置信息,进行自动配置;系统优先自动配置-->
+    <auto_configure>
+      <!--表示是否自动配置：0表示不自动；1表示自动-->
+      <is_auto>1</is_auto>
+
+      <!--表示自动配置的大小-->
+      <auto_size>24</auto_size>
+    </auto_configure>
+
+    <!--表示手动配置信息-->
+    <overlap_point_configure>
+      <overlap_point_0>
+        <x>2492</x>
+        <y>0</y>
+      </overlap_point_0>
+      <overlap_point_1>
+        <x>2492</x>
+        <y>0</y>
+      </overlap_point_1>
+      <overlap_point_2>
+        <x>2492</x>
+        <y>1519</y>
+      </overlap_point_2>
+      <overlap_point_3>
+        <x>2492</x>
+        <y>1519</y>
+      </overlap_point_3>
+    </overlap_point_configure>
+
+    <!--双路拼接时stitching 校正-->
+    <camera_stitch_correction>
+      <!--左边图像， 双路拼接时stitching 校正-->
+      <left_stitch_correction>
+        <!--是否使用cylind柱面校正，0:表示不使用；1表示使用-->
+        <is_use_cylind>0</is_use_cylind>
+
+        <!--中心水平偏移，取值范围：[-127, 127]-->
+        <center_horizontal_offset>0</center_horizontal_offset>
+
+        <!--中心垂直偏移，取值范围：[-127, 127]-->
+        <center_vertical_offset>0</center_vertical_offset>
+
+        <!--柱面投影校正程度，取值范围：[0, 500]-->
+        <ratio>0</ratio>
+      </left_stitch_correction>
+
+      <!--右边图像， 双路拼接时stitching 校正-->
+      <right_stitch_correction>
+        <!--是否使用cylind柱面校正，0:表示不使用；1表示使用-->
+        <is_use_cylind>0</is_use_cylind>
+
+        <!--中心水平偏移，取值范围：[-127, 127]-->
+        <center_horizontal_offset>0</center_horizontal_offset>
+
+        <!--中心垂直偏移，取值范围：[-127, 127]-->
+        <center_vertical_offset>0</center_vertical_offset>
+
+        <!--柱面投影校正程度，取值范围：[0, 500]-->
+        <ratio>0</ratio>
+      </right_stitch_correction>
+    </camera_stitch_correction>
+  </stitch_configure>
+
+  <!--左摄像头配置-->
+  <left_camera_configure>
+
+    <!--表示旋转角度，取值[0, 90, 180, 270, 360]-->
+    <rotate>90</rotate>
+
+    <!--是否水平翻转，0表示不翻转；1表示翻转-->
+    <is_mirror>0</is_mirror>
+
+    <!--是否垂直翻转，0表示不翻转；1表示翻转-->
+    <is_flip>1</is_flip>
+
+    <!--鱼眼校正安装模式:0表示底装模式；1表示顶装模式；2壁装模式-->
+    <mount_mode>0</mount_mode>
+
+    <!--该校正区域的校正模式:0表示360全景校正；1表示180全景校正；2表示Normal 校正-->
+    <view_mode>0</view_mode>
+
+    <!--镜头中心点相对于SENSOR 中心点的水平偏移，取值范围[-127, 127]，单位为像素。-->
+    <hor_offset>13</hor_offset>
+
+    <!--镜头中心点相对于SENSOR 中心点的垂直偏移，取值范围[-127, 127]，单位为像素。-->
+    <ver_offset>-7</ver_offset>
+
+    <!--梯形强度系数TrapezoidCoef 只在壁装时的normal 和180 校正时有效。-->
+    <trapezoid_coef>0</trapezoid_coef>
+
+    <!--扇形强度系数FanStrength 只在180 校正时有效，用于调整图像水平方向的线条。取值范围[-760, 760]-->
+    <fan_strength>0</fan_strength>
+
+    <!--360 全景模式表示该校正区域所对应原图的内半径，其他模式无效-->
+    <in_radius>0</in_radius>
+
+    <!--360 全景模式表示该校正区域所对应原图的外半径，其他模式为校正区域的可视半径;取值范围：[1, 2304]-->
+    <out_radius>787</out_radius>
+
+    <!--该校正区域PTZ 参数的Pan 值.视场角的左右转动，大于180 向右转动，小于180 向左转动-->
+    <pan>90</pan>
+
+    <!--该校正区域PTZ 参数的Tilt 值.视场角的上下转动，大于180 向上转动，小于180 向下转动。-->
+    <tilt>180</tilt>
+
+    <!--该校正区域PTZ 参数的水平Zoom 值.水平视场角大小，4095 为最大（180 度）。-->
+    <hor_zoom>4095</hor_zoom>
+
+    <!--该校正区域PTZ 参数的垂直Zoom 值.垂直视场角大小，4095 为最大（90 度）。-->
+    <ver_zoom>4095</ver_zoom>
+
+    <!--该校正区域的输出位置及宽高,起始点 x位置-->
+    <outrect_x>0</outrect_x>
+
+    <!--该校正区域的输出位置及宽高,起始点 y位置-->
+    <outrect_y>0</outrect_y>
+
+    <!--该校正区域的输出位置及宽高,图像宽度-->
+    <outrect_width>1920</outrect_width>
+
+    <!--该校正区域的输出位置及宽高,图像高度-->
+    <outrect_height>1520</outrect_height>
+
+    <!--亮度调节参数，默认值：50，取值范围[0, 100]-->
+    <luminance>57</luminance>
+
+    <!--对比度调节参数，默认值：50，取值范围[0, 100]-->
+    <contrast>50</contrast>
+
+    <!--色调调节参数，默认值：50，取值范围[0, 100]-->
+    <hue>50</hue>
+
+    <!--饱和度调节参数，默认值：50，取值范围[0, 100]-->
+    <satuature>50</satuature>
+
+  </left_camera_configure>
+
+  <!--右摄像头配置-->
+  <right_camera_configure>
+    <!--表示旋转角度，取值[0, 90, 180, 270, 360]-->
+    <rotate>90</rotate>
+
+    <!--是否水平翻转，0表示不翻转；1表示翻转-->
+    <is_mirror>1</is_mirror>
+
+    <!--是否垂直翻转，0表示不翻转；1表示翻转-->
+    <is_flip>0</is_flip>
+
+    <!--鱼眼校正安装模式:0表示底装模式；1表示顶装模式；2壁装模式-->
+    <mount_mode>0</mount_mode>
+
+    <!--该校正区域的校正模式:0表示360全景校正；1表示180全景校正；2表示Normal 校正-->
+    <view_mode>0</view_mode>
+
+    <!--镜头中心点相对于SENSOR 中心点的水平偏移，取值范围[-127, 127]，单位为像素。-->
+    <hor_offset>-25</hor_offset>
+
+    <!--镜头中心点相对于SENSOR 中心点的垂直偏移，取值范围[-127, 127]，单位为像素。-->
+    <ver_offset>28</ver_offset>
+
+    <!--梯形强度系数TrapezoidCoef 只在壁装时的normal 和180 校正时有效。-->
+    <trapezoid_coef>0</trapezoid_coef>
+
+    <!--扇形强度系数FanStrength 只在180 校正时有效，用于调整图像水平方向的线条。取值范围[-760, 760]-->
+    <fan_strength>0</fan_strength>
+
+    <!--360 全景模式表示该校正区域所对应原图的内半径，其他模式无效-->
+    <in_radius>0</in_radius>
+
+    <!--360 全景模式表示该校正区域所对应原图的外半径，其他模式为校正区域的可视半径;取值范围：[1, 2304]-->
+    <out_radius>790</out_radius>
+
+    <!--该校正区域PTZ 参数的Pan 值.视场角的左右转动，大于180 向右转动，小于180 向左转动-->
+    <pan>90</pan>
+
+    <!--该校正区域PTZ 参数的Tilt 值.视场角的上下转动，大于180 向上转动，小于180 向下转动。-->
+    <tilt>180</tilt>
+
+    <!--该校正区域PTZ 参数的水平Zoom 值.水平视场角大小，4095 为最大（180 度）。-->
+    <hor_zoom>4095</hor_zoom>
+
+    <!--该校正区域PTZ 参数的垂直Zoom 值.垂直视场角大小，4095 为最大（90 度）。-->
+    <ver_zoom>4095</ver_zoom>
+
+    <!--该校正区域的输出位置及宽高,起始点 x位置-->
+    <outrect_x>0</outrect_x>
+
+    <!--该校正区域的输出位置及宽高,起始点 y位置-->
+    <outrect_y>0</outrect_y>
+
+    <!--该校正区域的输出位置及宽高,图像宽度-->
+    <outrect_width>1920</outrect_width>
+
+    <!--该校正区域的输出位置及宽高,图像高度-->
+    <outrect_height>1520</outrect_height>
+
+    <!--亮度调节参数，默认值：50，取值范围[0, 100]-->
+    <luminance>40</luminance>
+
+    <!--对比度调节参数，默认值：50，取值范围[0, 100]-->
+    <contrast>50</contrast>
+
+    <!--色调调节参数，默认值：50，取值范围[0, 100]-->
+    <hue>50</hue>
+
+    <!--饱和度调节参数，默认值：50，取值范围[0, 100]-->
+    <satuature>55</satuature>
+
+  </right_camera_configure>
+</codec_configure>

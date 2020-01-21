@@ -1,0 +1,34 @@
+#set src files list
+#set player hook directory
+
+#add player HOOK source directory
+AUX_SOURCE_DIRECTORY(${CP_PLAYER_SRC_FILTER_DIR} CP_PLAYER_SRC_FILTER_FILES_LIST)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FILTER_DIR}/semh)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FILTER_DIR}/memh)
+
+
+#build sub directory
+ADD_SUBDIRECTORY(${CP_PLAYER_SRC_FILTER_DIR}/ptp)
+
+
+#add source file list
+SET(CP_PLAYER_EXECUTABLE_FILES_LIST 
+	${CP_PLAYER_EXECUTABLE_FILES_LIST} 
+	${CP_PLAYER_SRC_FILTER_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_PLAYER_INCLUDE_DIR 
+    ${CP_PLAYER_INCLUDE_DIR} 
+	${CP_PLAYER_SRC_FILTER_DIR}
+
+	PARENT_SCOPE
+	)

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>md $(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib
+::copy $(OutputPath)\*  $(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib  /Y
+::copy $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib  /Y
+copy $(OutDir)$(TargetName)* $(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib  /Y
+echo "copy third_party[ $(ProjectName) : $(TargetName)$(TargetExt) ] to [ $(SolutionDir)\..\..\third-party\lib\$(PlatformName)_$(PlatformShortName)\$(PlatformToolset)\$(ConfigurationName)\$(ProjectName)\lib ] successed"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

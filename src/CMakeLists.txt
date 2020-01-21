@@ -1,0 +1,198 @@
+
+
+
+#set src files list
+#set core directory
+SET(CP_SRC_CORE_DIR ${CP_SRC_DIR}/core)
+#set app directory
+SET(CP_SRC_APP_DIR ${CP_SRC_DIR}/app)
+#set codecs directory
+SET(CP_SRC_CODECS_DIR ${CP_SRC_DIR}/codec)
+#set conf directory
+SET(CP_SRC_CONF_DIR ${CP_SRC_DIR}/conf)
+#set filter directory
+SET(CP_SRC_FILTER_DIR ${CP_SRC_DIR}/filter)
+#set func directory
+SET(CP_SRC_FUNC_DIR ${CP_SRC_DIR}/func)
+#set hook directory
+SET(CP_SRC_HOOK_DIR ${CP_SRC_DIR}/hook)
+#set log directory
+SET(CP_SRC_LOG_DIR ${CP_SRC_DIR}/log)
+#set media directory
+SET(CP_SRC_MEDIA_DIR ${CP_SRC_DIR}/media)
+#set module directory
+SET(CP_SRC_MODULE_DIR ${CP_SRC_DIR}/module)
+#set os directory
+SET(CP_SRC_OS_DIR ${CP_SRC_DIR}/os)
+#set pool directory
+SET(CP_SRC_POOL_DIR ${CP_SRC_DIR}/pool)
+#set process directory
+SET(CP_SRC_PROCESS_DIR ${CP_SRC_DIR}/process)
+#set protocol directory
+SET(CP_SRC_PROTOCOL_DIR ${CP_SRC_DIR}/protocol)
+#set session directory
+SET(CP_SRC_SESSION_DIR ${CP_SRC_DIR}/session)
+#set socket directory
+SET(CP_SRC_SOCKET_DIR ${CP_SRC_DIR}/socket)
+#set thread directory
+SET(CP_SRC_THREAD_DIR ${CP_SRC_DIR}/thread)
+#set timer directory
+SET(CP_SRC_TIMER_DIR ${CP_SRC_DIR}/timer)
+#set extend directory
+SET(CP_SRC_EXTEND_DIR ${CP_SRC_DIR}/extend)
+#set utils directory
+SET(CP_SRC_UTILS_DIR ${CP_SRC_DIR}/utils)
+#set dev directory
+SET(CP_SRC_DEV_DIR ${CP_SRC_DIR}/dev)
+
+
+
+#add core source directory
+ADD_SUBDIRECTORY(${CP_SRC_CORE_DIR})
+#add app source directory
+ADD_SUBDIRECTORY(${CP_SRC_APP_DIR})
+#add codecs source directory
+ADD_SUBDIRECTORY(${CP_SRC_CODECS_DIR})
+#add conf source directory
+ADD_SUBDIRECTORY(${CP_SRC_CONF_DIR})
+#add filter source directory
+ADD_SUBDIRECTORY(${CP_SRC_FILTER_DIR})
+#add func source directory
+ADD_SUBDIRECTORY(${CP_SRC_FUNC_DIR})
+#add hook source directory
+ADD_SUBDIRECTORY(${CP_SRC_HOOK_DIR})
+#add log source directory
+ADD_SUBDIRECTORY(${CP_SRC_LOG_DIR})
+#add media source directory
+ADD_SUBDIRECTORY(${CP_SRC_MEDIA_DIR})
+#add module source directory
+ADD_SUBDIRECTORY(${CP_SRC_MODULE_DIR})
+#add os source directory
+ADD_SUBDIRECTORY(${CP_SRC_OS_DIR})
+#add pool source directory
+ADD_SUBDIRECTORY(${CP_SRC_POOL_DIR})
+#add process source directory
+ADD_SUBDIRECTORY(${CP_SRC_PROCESS_DIR})
+#add protocol source directory
+ADD_SUBDIRECTORY(${CP_SRC_PROTOCOL_DIR})
+#add session source directory
+ADD_SUBDIRECTORY(${CP_SRC_SESSION_DIR})
+#add socket source directory
+ADD_SUBDIRECTORY(${CP_SRC_SOCKET_DIR})
+#add thread source directory
+ADD_SUBDIRECTORY(${CP_SRC_THREAD_DIR})
+#add timer source directory
+ADD_SUBDIRECTORY(${CP_SRC_TIMER_DIR})
+#add extend source directory
+ADD_SUBDIRECTORY(${CP_SRC_EXTEND_DIR})
+#add utils source directory
+ADD_SUBDIRECTORY(${CP_SRC_UTILS_DIR})
+#add dev source directory
+ADD_SUBDIRECTORY(${CP_SRC_DEV_DIR})
+
+
+
+#set x86 platform
+IF(${CP_PLATFORM} STREQUAL "x86")
+	SET(SYSTEM_USR_I686_INCLUDE_DIR /usr/lib/i686-redhat-linux6E/include/)
+	SET(SYSTEM_USR_I686_LIB_DIR /usr/lib/i686-redhat-linux6E/lib/)
+
+	#add system include direntories
+	INCLUDE_DIRECTORIES(
+    	${SYSTEM_USR_I686_INCLUDE_DIR}
+    )
+
+	#add system library directories 
+	LINK_DIRECTORIES(
+    ${SYSTEM_USR_I686_LIB_DIR}
+    )
+ENDIF()
+
+
+#add system include direntories
+INCLUDE_DIRECTORIES(SYSTEM 
+    ${SYSTEM_USR_INCLUDE_DIR}
+    ${SYSTEM_USR_LOCAL_INCLUDE_DIR}
+    ${CP_INCLUDE_DIR}
+    )
+#MESSAGE(STATUS "project inlude path: "${CP_INCLUDE_DIR})
+
+
+#add library directories 
+LINK_DIRECTORIES(
+    ${CP_LIBRARY_DIR}
+    )
+
+#add include dir
+SET(CP_INCLUDE_DIR ${CP_INCLUDE_DIR} 
+	PARENT_SCOPE
+	)
+	
+#MESSAGE(STATUS "update include path : "${CP_INCLUDE_DIR})
+
+SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lpthread  -ldl -lrt -lc")
+SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -lpthread -ldl -lrt -lc")
+
+#make cp_lib.lib
+SET(LIBRARY_OUTPUT_PATH ${CP_PROJECT_OUTPUT_TOP_DIR}/${CP_PROJECT_NAME})
+
+
+ADD_LIBRARY (CP_PROJECT_LIBRARY_SOURCES OBJECT ${CP_EXECUTABLE_FILES_LIST})
+ADD_LIBRARY(${CP_PROJECT_LIBRARY_SHARED_NAME} SHARED $<TARGET_OBJECTS:CP_PROJECT_LIBRARY_SOURCES>)
+ADD_LIBRARY(${CP_PROJECT_LIBRARY_STATIC_NAME} STATIC $<TARGET_OBJECTS:CP_PROJECT_LIBRARY_SOURCES>)
+
+
+SET(CP_PROJECT_TARGET_LINK_LIBRARIES
+	libxml2.a
+	libuv.a
+	libzlog.a
+	libiniparser.a
+	libgmf_parser.a
+	libuuid.a
+	
+	libz.a
+	liblzma.a
+	libcharset.a
+	libiconv.a
+	liblfds710.a
+	librt.a
+	libm.a
+)
+
+TARGET_LINK_LIBRARIES(${CP_PROJECT_LIBRARY_SHARED_NAME}
+		${CP_PROJECT_TARGET_LINK_LIBRARIES}
+	)
+	
+TARGET_LINK_LIBRARIES(${CP_PROJECT_LIBRARY_STATIC_NAME}
+		${CP_PROJECT_TARGET_LINK_LIBRARIES}
+	)
+	
+
+# 按照一般的习惯，静态库名字跟动态库名字应该是一致的，只是扩展名不同；
+SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_STATIC_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_NAME})
+SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_SHARED_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_NAME})
+
+
+# cmake在构建一个新的target时，会尝试清理掉其他使用这个名字的库，
+# 因此，在构建libhello.a时，就会清理掉libhello.so.
+# 为了回避这个问题，比如再次使用SET_TARGET_PROPERTIES定义 CLEAN_DIRECT_OUTPUT属性。
+SET_TARGET_PROPERTIES (${CP_PROJECT_LIBRARY_STATIC_NAME} PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+SET_TARGET_PROPERTIES (${CP_PROJECT_LIBRARY_SHARED_NAME} PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+
+
+# 按照规则，动态库是应该包含一个版本号的，
+# VERSION指代动态库版本，SOVERSION指代API版本。
+string(SUBSTRING ${CP_PROJECT_LIBRARY_VERSION} 0 1 CP_PROJECT_LIBRARY_VERSION_MAJOR)
+SET_TARGET_PROPERTIES (${CP_PROJECT_LIBRARY_STATIC_NAME} PROPERTIES VERSION ${CP_PROJECT_LIBRARY_VERSION} SOVERSION ${CP_PROJECT_LIBRARY_VERSION_MAJOR})
+SET_TARGET_PROPERTIES (${CP_PROJECT_LIBRARY_SHARED_NAME} PROPERTIES VERSION ${CP_PROJECT_LIBRARY_VERSION} SOVERSION ${CP_PROJECT_LIBRARY_VERSION_MAJOR})
+
+
+#SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_STATIC_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_NAME})
+#SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_SHARED_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_NAME})
+#SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_STATIC_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_LIBRARY_RELEASE_NAME})
+#SET_TARGET_PROPERTIES(${CP_PROJECT_LIBRARY_SHARED_NAME} PROPERTIES OUTPUT_NAME ${CP_PROJECT_LIBRARY_RELEASE_NAME})
+
+
+MESSAGE(STATUS "shared library:[${CP_PROJECT_LIBRARY_SHARED_NAME}]")
+MESSAGE(STATUS "static library:[${CP_PROJECT_LIBRARY_STATIC_NAME}]")
+MESSAGE(STATUS "build library:[${CP_PROJECT_NAME}]")

@@ -1,0 +1,35 @@
+
+
+
+#set src files list
+#set socket directory
+SET(CP_SRC_SOCKET_LIBUV_SOCKET_DIR ${CP_SRC_SOCKET_DIR}/libuv_socket)
+
+
+
+
+
+#add socket source directory
+AUX_SOURCE_DIRECTORY(${CP_SRC_SOCKET_LIBUV_SOCKET_DIR} CP_SRC_SOCKET_LIBUV_SOCKET_FILES_LIST)
+
+
+
+
+
+
+#add source file list
+SET(CP_SRC_SOCKET_FILES_LIST 
+	${CP_SRC_SOCKET_FILES_LIST} 
+	${CP_SRC_SOCKET_LIBUV_SOCKET_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_SRC_SOCKET_DIR 
+	${CP_SRC_SOCKET_DIR} 
+	${CP_SRC_SOCKET_LIBUV_SOCKET_DIR}
+	
+	PARENT_SCOPE
+	)
+	

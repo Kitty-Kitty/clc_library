@@ -1,0 +1,170 @@
+libisp.a
+		libsns_ov4689_slave.a
+		lib_cmoscfg.a
+		lib_hiae.a
+		lib_hiawb.a
+		lib_hiaf.a
+		lib_hidefog.a
+		
+		libmpi.a
+		libupvqe.a
+		libhive_common.so
+		libhive_RNR.so
+		libhive_HPF.so
+		
+		libhive_GAIN.so
+		libhive_EQ.so
+		libhive_ANR.so
+		libhive_AGC.so
+		libhive_AEC.so
+		
+		libhive_HDR.so
+		lib_cmoscfg.a
+		
+		lib_cmoscfg.so
+		libdnvqe.a
+		libdnvqe.so
+		lib_hiae.a
+		lib_hiae.so
+		lib_hiaf.a
+		lib_hiaf.so
+		lib_hiawb.a
+		lib_hiawb.so
+		lib_hidefog.a
+		lib_hidefog.so
+		libhidis.so
+		libhistitch.a
+		libhistitch.so
+		libhive_AEC.so
+		libhive_AGC.so
+		libhive_ANR.so
+		libhive_common.so
+		libhive_DRC.so
+		libhive_EQ.so
+		libhive_GAIN.so
+		libhive_HDR.so
+		libhive_HPF.so
+		libhive_MBC.so
+		libhive_PEQ.so
+		libhive_RES.so
+		libhive_RNR.so
+		libisp.a
+		libisp.so
+		libive.a
+		libive.so
+		libmd.a
+		libmd.so
+		libmpi.a
+		libmpi.so
+		libsns_imx117.a
+		libsns_imx117.so
+		libsns_imx226.a
+		libsns_imx226.so
+		libsns_imx274.a
+		libsns_imx274.so
+		libsns_imx290.a
+		libsns_imx290.so
+		libsns_mn34220.a
+		libsns_mn34220_mipi.a
+		libsns_mn34220_mipi.so
+		libsns_mn34220.so
+		libsns_ov4689_slave.a
+		libsns_ov4689_slave.so
+		libtde.a
+		libtde.so
+		libupvqe.a
+		libupvqe.so
+		libVoiceEngine.a
+		libVoiceEngine.so
+
+		
+    libxml2.a
+		libuv.a
+		libzlog.a
+		
+		libgmf_parser.a
+		libuuid.a
+		libpthread.a
+		libc.a
+		libz.a
+		liblzma.a
+		libcharset.a
+		libiconv.a
+		liblfds710.a
+		libdl.a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lib_cmoscfg.a
+lib_cmoscfg.so
+libdnvqe.a
+libdnvqe.so
+lib_hiae.a
+lib_hiae.so
+lib_hiaf.a
+lib_hiaf.so
+lib_hiawb.a
+lib_hiawb.so
+lib_hidefog.a
+lib_hidefog.so
+libhidis.so
+libhistitch.a
+libhistitch.so
+libhive_AEC.so
+libhive_AGC.so
+libhive_ANR.so
+libhive_common.so
+libhive_DRC.so
+libhive_EQ.so
+libhive_GAIN.so
+libhive_HDR.so
+libhive_HPF.so
+libhive_MBC.so
+libhive_PEQ.so
+libhive_RES.so
+libhive_RNR.so
+libisp.a
+libisp.so
+libive.a
+libive.so
+libmd.a
+libmd.so
+libmpi.a
+libmpi.so
+libsns_imx117.a
+libsns_imx117.so
+libsns_imx226.a
+libsns_imx226.so
+libsns_imx274.a
+libsns_imx274.so
+libsns_imx290.a
+libsns_imx290.so
+libsns_mn34220.a
+libsns_mn34220_mipi.a
+libsns_mn34220_mipi.so
+libsns_mn34220.so
+libsns_ov4689_slave.a
+libsns_ov4689_slave.so
+libtde.a
+libtde.so
+libupvqe.a
+libupvqe.so
+libVoiceEngine.a
+libVoiceEngine.so
+

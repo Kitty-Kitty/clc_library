@@ -1,0 +1,21 @@
+{
+  "name": "react-intl-example-hello-world",
+  "version": "1.0.0",
+  "description": "React Intl Hello World Example",
+  "private": true,
+  "main": "index.js",
+  "author": "Eric Ferraiuolo <edf@ericf.me>",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-intl": "^2.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}

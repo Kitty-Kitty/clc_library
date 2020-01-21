@@ -1,0 +1,35 @@
+
+
+
+#set src files list
+#set timer directory
+SET(CP_SRC_TIMER_LIBUV_TIMER_DIR ${CP_SRC_TIMER_DIR}/libuv_timer)
+
+
+
+
+
+#add timer source directory
+AUX_SOURCE_DIRECTORY(${CP_SRC_TIMER_LIBUV_TIMER_DIR} CP_SRC_TIMER_LIBUV_TIMER_FILES_LIST)
+
+
+
+
+
+#add source file list
+SET(CP_SRC_TIMER_FILES_LIST 
+	${CP_SRC_TIMER_FILES_LIST} 
+	${CP_SRC_TIMER_LIBUV_TIMER_FILES_LIST} 
+	
+	PARENT_SCOPE
+	)
+
+#add include dir
+SET(CP_SRC_TIMER_DIR 
+	${CP_SRC_TIMER_DIR} 
+	${CP_SRC_TIMER_LIBUV_TIMER_DIR}
+	
+	PARENT_SCOPE
+	)
+
+	

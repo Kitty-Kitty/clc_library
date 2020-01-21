@@ -1,0 +1,17 @@
+
+
+mount -t nfs -o nolock 192.168.1.79:/home/f/Project /mnt/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/Hi3519V101_SDK_V1.0.0.1/mpp_big-little/lib
+
+export CSS_ENV_CONF_PATH="/home/ecam/configs/ecam.conf"
+
+
+/home/ko/load3519v101 -a -sensor0 ov4689 -sensor1 ov4689 -osmem 64 -total 512 -offline
+
+./load3519v101 -a -sensor0 ov4689 -sensor1 ov4689 -osmem 64 -total 512  -offline
+
+/mnt/css_player_fix_org/build/debug/cp_ecam360/cp_ecam360
+
+/mnt/tools/hi3516c/gdb-7.10.1/arm-hisiv500/bin/gdbserver 192.168.1.145:8080 /mnt/css_player_fix_org/build/debug/cp_ecam360/cp_ecam360 
+
+/home/f/Project/tools/x86/gdb-7.10.1/bin/arm-hisiv500-linux-gdb  /home/f/Project/css_player_fix_org/build/debug/cp_ecam360/cp_ecam360 

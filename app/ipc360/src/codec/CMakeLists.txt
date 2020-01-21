@@ -1,0 +1,45 @@
+#set src files list
+#set ipc codecs directory
+
+
+#add ipc codecs source directory
+AUX_SOURCE_DIRECTORY(${CP_IPC_SRC_CODEC_DIR} CP_IPC_SRC_CODEC_FILES_LIST)
+
+
+IF(${CP_PLATFORM} STREQUAL "hisiv500")
+
+#set func ipc directory
+SET(CP_IPC_SRC_CODEC_HI3519_DIR ${CP_IPC_SRC_CODEC_DIR}/hi3519)
+
+#add core source directory
+ADD_SUBDIRECTORY(${CP_IPC_SRC_CODEC_HI3519_DIR})
+
+ENDIF()
+
+
+IF(${CP_PLATFORM} STREQUAL "hisiv600")
+
+#set func ipc directory
+SET(CP_IPC_SRC_CODEC_HI3559_DIR ${CP_IPC_SRC_CODEC_DIR}/hi3559)
+
+#add core source directory
+ADD_SUBDIRECTORY(${CP_IPC_SRC_CODEC_HI3559_DIR})
+
+ENDIF()
+
+
+#add source file list
+SET(CP_IPC_EXECUTABLE_FILES_LIST 
+	${CP_IPC_EXECUTABLE_FILES_LIST} 
+	${CP_IPC_SRC_CODEC_FILES_LIST} 
+
+	PARENT_SCOPE
+	)
+
+
+#add include dir
+SET(CP_IPC_INCLUDE_DIR ${CP_IPC_INCLUDE_DIR} 
+	${CP_IPC_SRC_CODEC_DIR}
+
+	PARENT_SCOPE
+	)
